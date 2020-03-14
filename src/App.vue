@@ -16,7 +16,7 @@
       </v-list>
       <v-divider></v-divider>
       <v-list>
-        <v-list-group v-for="item in items" :key="item.title" v-model="item.active" :prepend-icon="item.action" no-action>
+        <v-list-group v-for="item in items" :key="item.title" v-model="item.active" no-action>
           <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title v-text="item.title"></v-list-item-title>
@@ -61,8 +61,8 @@
       drawer: null,
       items: [
         {
-          key: 'main',
-          action: 'mdi-audiobook ',
+          key: 'vuetifyaudio',
+          action: 'mdi-audiobook',
           title: 'vuetify-audio',
           active: false,
           items: [
@@ -70,6 +70,16 @@
             { title: 'Github', url: 'https://github.com/wilsonwu/vuetify-audio' }
           ]
         },
+        /*{
+          key: 'translationgoogle',
+          action: 'mdi-audiobook',
+          title: 'translation-google',
+          active: false,
+          items: [
+            { title: 'Demo', url: '#/translationgoogle' },
+            { title: 'Github', url: 'https://github.com/wilsonwu/translation-google' }
+          ]
+        },*/
         {
           key: 'setting',
           action: 'mdi-settings',
