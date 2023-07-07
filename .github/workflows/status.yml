@@ -1,17 +1,12 @@
-name: GitHub README STATS
+name: Go
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
-  push:
-    branches:
-      - main
 
 env:
   GITHUB_NAME: wilsonwu
   GITHUB_EMAIL: iwilsonwu@gmail.com
-  STARRED_NUM: 10
+  STARED_NUMBER: 20
 
 jobs:
   build:
@@ -19,12 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: My GitHub Status
-        uses: yihong0618/github-readme-stats@main
+      - name: My GitHub Yealy Status
+        uses: pacoxu/github-readme-stats@wilsonwu
+        with:
+          WITH_STARED: false
+          GH_USERNAME: wilsonwu
+          CREATED: "2022-07-01..2023-07-01"
 
       - name: Push README
         run: |
           git config --local user.email "${{ env.GITHUB_EMAIL }}"
-          git config --local user.name "${{ env.GITHUB_EMAIL }}"
-          git commit -a -m 'docs: update readme.md' || echo "nothing to commit"
-          git push || echo "nothing to push"
+          git config --local user.name "${{ env.GITHUB_NAME }}"
+          git commit -a -m 'docs: update readme.md'
+          git push
