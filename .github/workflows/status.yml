@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  GITHUB_NAME: wilsonwu-bot
+  GITHUB_NAME: wilsonwu
   GITHUB_EMAIL: iwilsonwu@gmail.com
   STARED_NUMBER: 20
 
@@ -17,9 +17,9 @@ jobs:
       - name: My GitHub Yealy Status
         uses: pacoxu/github-readme-stats@yearly-readme
         with:
-          WITH_STARED: true
+          WITH_STARED: false
           GH_USERNAME: wilsonwu
-          YEARS: 2023
+          YEARS: 2022
       - name: Push README
         run: |
           git config --local user.email "${{ env.GITHUB_EMAIL }}"
