@@ -1,0 +1,28 @@
+name: Go
+
+on:
+  workflow_dispatch:
+
+env:
+  GITHUB_NAME: wilsonwu-bot
+  GITHUB_EMAIL: iwilsonwu@gmail.com
+  STARED_NUMBER: 20
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: My GitHub Yealy Status
+        uses: pacoxu/github-readme-stats@yearly-readme
+        with:
+          WITH_STARED: true
+          GH_USERNAME: wilsonwu
+          YEARS: 2023
+      - name: Push README
+        run: |
+          git config --local user.email "${{ env.GITHUB_EMAIL }}"
+          git config --local user.name "${{ env.GITHUB_NAME }}"
+          git commit -a -m 'docs: update readme.md'
+          git push
