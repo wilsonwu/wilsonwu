@@ -4,4 +4,4 @@ run:
 
 .PHONY: update
 update:
-	git submodule update --init --recursive
+	git submodule update --remote --merge
