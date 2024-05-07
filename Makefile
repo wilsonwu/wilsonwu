@@ -4,4 +4,4 @@ run:
 
 .PHONY: update
 update:
-	cd themes/PaperMod/ && git pull
+	git submodule update --init --recursive
