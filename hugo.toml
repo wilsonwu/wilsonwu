@@ -1,4 +1,4 @@
-baseURL = 'https://wilsonwu.me/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'PaperMod'
+baseURL = "https://wilsonwu.me/"
+languageCode = "en-us"
+title = "Wilson Wu's Blog"
+theme = "PaperMod"
