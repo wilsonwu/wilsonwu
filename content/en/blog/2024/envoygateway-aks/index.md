@@ -4,6 +4,9 @@ description: In this blog post, we will explore how to use Envoy Gateway on Azur
 publishdate: 2024-05-13
 attribution: "Wilson Wu"
 keywords: [aks,envoy,gateway,k8s,kubernetes]
+# canonicalURL: "http://www.google.com"
+# canonicalLinkText: Originally published at
+# showCanonicalLink: true
 ---
 
 In this blog post, we will explore how to use Envoy Gateway on Azure AKS (Azure Kubernetes Service). Envoy Gateway is a powerful edge and service proxy that provides advanced load balancing, routing, and observability capabilities.

@@ -48,7 +48,6 @@ menus:
 #     weight: 30
 
 params:
-  startYear: 2018
   homeInfoParams:
     Title: Welcome!
     Content: Cloud Native, Software Development, Open Source and AI!
