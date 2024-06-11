@@ -1,0 +1,36 @@
+
+{{- if not (.Param "hideFooter") }}
+<footer class="footer">
+    {{- if .Site.Copyright }}
+    <span>{{ .Site.Copyright | markdownify }}</span>
+    {{- else }}
+    <span>
+        Copyright
+        &copy;
+        {{ .Site.Params.StartYear }}-{{ now.Year }}
+        <a href="{{ "" | absLangURL }}" style="color:#939393;">{{ .Site.Title }}</a>
+        All Rights Reserved
+    </span>
+    <!-- <span id="busuanzi_container">
+        <span class="fa fa-user"></span> <span id="busuanzi_value_site_uv"></span>
+        <span class="fa fa-eye"></span> <span id="busuanzi_value_site_pv"></span>
+    </span> -->
+    {{- end }}
+</footer>
+{{- end }}
+
+{{- partial "extend_footer.html" . }}
+
+{{- if .Site.Params.extendCodeBackground }}
+<script>
+    $("code[class^=language] ").on("mouseover", function () {
+        if (this.clientWidth < this.scrollWidth) {
+            $(this).css("width", "135%")
+            $(this).css("border-top-right-radius", "var(--radius)")
+        }
+    }).on("mouseout", function () {
+        $(this).css("width", "100%")
+        $(this).css("border-top-right-radius", "unset")
+    })
+</script>
+{{- end }}

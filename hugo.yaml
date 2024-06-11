@@ -1,6 +1,6 @@
+title: Wilson Wu
 baseURL: https://wilsonwu.me/
 theme: PaperMod
-copyright: © 2024 Wilson Wu
 defaultContentLanguage: zh
 googleAnalytics: G-SYXWVNYJHY
 
@@ -11,16 +11,22 @@ languages:
     languageDirection: ltr
     contentDir: content/zh
     languageName: Chinese
-    title: Wilson Wu 的博客
     weight: 1
   en:
     languageCode: en-US
     languageDirection: ltr
     contentDir: content/en
     languageName: English
-    title: Wilson Wu's Blog
     weight: 2
 
+menus:
+  main:
+  - name: All Articles
+    pageRef: /archives
+    weight: 10
+  - name: Search
+    pageRef: /search
+    weight: 20
 # # menus
 # menus:
 #   footer:
@@ -40,3 +46,32 @@ languages:
 #   - name: Films
 #     pageRef: /films
 #     weight: 30
+
+params:
+  startYear: 2018
+  homeInfoParams:
+    Title: Welcome!
+    Content: Cloud Native, Software Development, Open Source and AI!
+  fuseOpts:
+    includeScore: true
+    includeMatches: true
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  showShareButtons: true
+  showReadingTime: true
+  cover:
+    linkFullImages: true
+  showBreadCrumbs: false
+  showPostNavLinks: true
+  showCodeCopyButtons: true
+  comments: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+services:
+  disqus:
+    shortname: wilsonwu
