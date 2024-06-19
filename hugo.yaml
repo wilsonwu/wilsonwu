@@ -50,7 +50,7 @@ menus:
 params:
   homeInfoParams:
     Title: Welcome!
-    Content: Cloud Native, Software Development, Open Source and AI!
+    Content: Cloud Native, Enterprise Application, Open Source and AI!
   fuseOpts:
     includeScore: true
     includeMatches: true
