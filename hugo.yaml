@@ -24,7 +24,7 @@ languages:
 menus:
   main:
   - name: Azure 101
-    pageRef: /azure-101
+    pageRef: /blog/azure-101
     weight: 90
   - name: All Articles
     pageRef: /archives
