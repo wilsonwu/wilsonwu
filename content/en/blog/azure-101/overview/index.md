@@ -3,7 +3,7 @@ title: "Azure 101 Series: Microsoft Azure Overview"
 description: The Azure 101 series covers the most comprehensive introduction to Microsoft Azure's features and services, covering various aspects of the platform's capabilities. This article provides an overview of Azure as a whole, helping users become familiar with and understand Azure's overall capabilities.
 publishdate: 2024-06-19
 attribution: "Wilson Wu"
-keywords: [overview,azure,microsoft]
+tags: [overview,azure,microsoft]
 aliases:
     - /en/azure-101/overview/
 

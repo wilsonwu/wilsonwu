@@ -3,7 +3,7 @@ title: "玩转大语言模型：无需任何代码通过 Azure OpenAI 服务构�
 description: 通过简单的界面操作，无需编写任何代码即可通过 Azure OpenAI 服务构建自己专属的 ChatGPT 应用。
 publishdate: 2024-06-25
 attribution: "Wilson Wu"
-keywords: [azure,ai,openai,chatgpt]
+tags: [azure,ai,openai,chatgpt]
 ---
 
 日常使用 ChatGPT 来帮助我们解决工作和生活中的问题已经变成习惯，但偶尔重度使用官方 GPT-4o 后发现会出现临时限额问题，今天我们就来手把手教大家如何轻松通过 Azure OpenAI 服务构建一个专属 ChatGPT 应用。

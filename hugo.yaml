@@ -6,6 +6,9 @@ googleAnalytics: G-SYXWVNYJHY
 enableRobotsTXT: true
 paginate: 15
 
+taxonomies:
+    tag: "tags"
+
 # internationalization
 languages:
   zh:

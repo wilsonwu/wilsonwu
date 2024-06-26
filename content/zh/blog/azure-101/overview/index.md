@@ -3,7 +3,7 @@ title: "Azure 101 系列课程：Microsoft Azure 概览"
 description: Azure 101 系列课程囊括了最全面的 Microsoft Azure 功能及服务介绍，涵盖了平台的各个方面的能力，本文主要阐述 Azure 整体概述，帮助用户熟悉和了解 Azure 整体能力。
 publishdate: 2024-06-19
 attribution: "Wilson Wu"
-keywords: [overview,azure,microsoft]
+tags: [overview,azure,microsoft]
 aliases:
     - /azure-101/overview/
 

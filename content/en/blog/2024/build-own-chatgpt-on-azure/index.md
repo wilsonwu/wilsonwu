@@ -3,7 +3,7 @@ title: "Building Your Own ChatGPT on Azure Without Writing Any Code"
 description: Learn how to build your own personalized ChatGPT application using Azure OpenAI services without writing any code.
 publishdate: 2024-06-25
 attribution: "Wilson Wu"
-keywords: [azure,ai,openai,chatgpt]
+tags: [azure,ai,openai,chatgpt]
 ---
 
 Using ChatGPT to help us solve problems in our work and daily life has become a habit. However, after using the official GPT-4o heavily, we may encounter temporary quota issues. Today, we will show you how to easily build your own personalized ChatGPT application using Azure OpenAI services.
