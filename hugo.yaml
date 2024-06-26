@@ -3,6 +3,8 @@ baseURL: https://wilsonwu.me/
 theme: PaperMod
 defaultContentLanguage: zh
 googleAnalytics: G-SYXWVNYJHY
+enableRobotsTXT: true
+paginate: 15
 
 # internationalization
 languages:

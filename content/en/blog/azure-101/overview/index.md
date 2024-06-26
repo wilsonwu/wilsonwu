@@ -3,7 +3,10 @@ title: "Azure 101 Series: Microsoft Azure Overview"
 description: The Azure 101 series covers the most comprehensive introduction to Microsoft Azure's features and services, covering various aspects of the platform's capabilities. This article provides an overview of Azure as a whole, helping users become familiar with and understand Azure's overall capabilities.
 publishdate: 2024-06-19
 attribution: "Wilson Wu"
-keywords: [overview, azure, microsoft]
+keywords: [overview,azure,microsoft]
+aliases:
+    - /en/azure-101/overview/
+
 ---
 Azure is a cloud computing platform and service provided by Microsoft. It offers a range of infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) solutions for building, deploying, and managing various types of applications and services.
 

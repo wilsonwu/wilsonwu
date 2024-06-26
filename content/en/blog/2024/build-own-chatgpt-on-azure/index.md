@@ -1,5 +1,5 @@
 ---
-title: Building Your Own ChatGPT on Azure Without Writing Any Code
+title: "Building Your Own ChatGPT on Azure Without Writing Any Code"
 description: Learn how to build your own personalized ChatGPT application using Azure OpenAI services without writing any code.
 publishdate: 2024-06-25
 attribution: "Wilson Wu"
@@ -97,7 +97,6 @@ After selecting, enter the deployment page, modify the relevant options as neede
 After successful deployment, we can see that GPT-4o appears in our deployment list:
 
 ![Deploy GPT-4o](3-gpt-4o.png)
-
 
 ## Step 4: Deploy Your Own ChatGPT Web Application
 

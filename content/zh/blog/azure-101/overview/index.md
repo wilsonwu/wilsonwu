@@ -4,6 +4,9 @@ description: Azure 101 系列课程囊括了最全面的 Microsoft Azure 功能�
 publishdate: 2024-06-19
 attribution: "Wilson Wu"
 keywords: [overview,azure,microsoft]
+aliases:
+    - /azure-101/overview/
+
 ---
 
 Azure 是由 Microsoft 提供的云计算平台和服务。它提供了一系列的基础设施即服务（Infrastructure as a Service，IaaS）、平台即服务（Platform as a Service，PaaS）和软件即服务（Software as a Service，SaaS）解决方案，用于构建、部署和管理各种类型的应用程序和服务。
