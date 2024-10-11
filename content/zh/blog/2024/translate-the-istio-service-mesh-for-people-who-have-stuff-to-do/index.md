@@ -1,7 +1,7 @@
 ---
 title: "为繁忙的人们准备的 Istio 服务网格"
 description: 翻译文章：了解 Luca Cavallin 使用 Istio 的经验。
-publishdate: 2024-06-25
+publishdate: 2024-10-10
 attribution: "Luca Cavallin - GitHub; Translated by Wilson Wu"
 tags: [istio,open-source,service-mesh,cncf]
 ---
