@@ -42,7 +42,7 @@ Istio 的主要功能之一是管理服务之间的流量。在微服务设置�
 
 以下是如何使用 Istio 在服务的两个版本之间分割流量的示例：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -60,7 +60,7 @@ spec:
         host: payments
         subset: v2
       weight: 10
-{{< /text >}}
+```
 
 在这个示例中：
 
@@ -100,7 +100,7 @@ Istio 还允许您设置**访问控制策略**，以指定允许哪些服务进�
 
 以下是 Istio 策略的示例，该策略仅允许 `billing` 服务与 `payments` 服务通信：
 
-{{< text yaml >}}
+```yaml
 apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy
 metadata:
@@ -113,7 +113,7 @@ spec:
   - from:
     - source:
         principals: ["billing.myapp.com"]
-{{< /text >}}
+```
 
 在这个策略中：
 
@@ -144,7 +144,7 @@ Networking in microservices can be difficult, especially when it comes to contro
 假设您的网格内有一个 API 服务器，它通过负载均衡器接收来自互联网的流量。
 以下是配置 Gateway，Service Entry，Virtual Service 以及 Destination Rule 来处理此流量的方法。
 
-{{< text yaml >}}
+```yaml
 Gateway Configuration
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
@@ -160,7 +160,7 @@ spec:
       protocol: HTTP
     hosts:
     - "api.myapp.com"
-{{< /text >}}
+```
 
 这里发生了什么？Gateway 在端口 80 上侦听来自域 `api.myapp.com` 的 HTTP 流量。选择器字段将此网关连接到 Istio 入口网关，后者处理进入网格的入站流量。
 
@@ -168,7 +168,7 @@ spec:
 
 假设您的 API 服务器需要调用外部身份验证服务。您可以按如下方式配置 Service Entry：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
@@ -184,7 +184,7 @@ spec:
   resolution: DNS
   endpoints:
   - address: 203.0.113.1
-{{< /text >}}
+```
 
 这里发生了什么？ Service Entry 告诉 Istio 如何将流量路由到在端口 443（HTTPS）上运行的外部服务（`auth.external-service.com`）。`location: MESH_EXTERNAL` 表示此服务存在于 Istio 服务网格之外。`endpoints` 字段包含外部服务的 IP 地址，允许网格内的 API 服务器发送请求。
 
@@ -192,7 +192,7 @@ spec:
 
 以下是如何在网格内路由流量：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -210,7 +210,7 @@ spec:
     - destination:
         host: api-service
         subset: stable
-{{< /text >}}
+```
 
 这里发生了什么？Virtual Service 定义了流量路由规则。在本例中，通过 `api-gateway` 到达 `api.myapp.com/v1` 的流量被路由到网格中的 `api-service`。`subset: stable` 指的是 `api-service` 的特定版本（您可以拥有同一服务的多个版本）。
 
@@ -218,7 +218,7 @@ spec:
 
 最后，这是应用负载平衡和 mTLS 的 Destination Rule：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
@@ -230,7 +230,7 @@ spec:
       simple: ROUND_ROBIN
     tls:
       mode: ISTIO_MUTUAL
-{{< /text >}}
+```
 
 这里发生了什么？目标规则将策略应用于路由到 api-service 的流量。它使用循环负载平衡在实例之间均匀分配请求。mTLS 已启用 `tls.mode: ISTIO_MUTUAL`，确保服务之间的加密通信。
 
@@ -244,7 +244,7 @@ spec:
 
 以下是如何在 Istio 中配置重试和超时的示例：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -260,14 +260,14 @@ spec:
       attempts: 3
       perTryTimeout: 2s
     timeout: 5s
-{{< /text >}}
+```
 
 这里发生了什么？如果对 `my-service` 的请求失败，
 Istio 将重试该请求最多 **3 次**。每次重试尝试都有 **2 秒的限制**。请求允许的总时间为 **5 秒**。此后，Istio 将停止等待响应。
 
 对于熔断，你可以使用这样的 **Destination Rule**：
 
-{{< text yaml >}}
+```yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
@@ -285,7 +285,7 @@ spec:
       interval: 10s
       baseEjectionTime: 30s
       maxEjectionPercent: 50
-{{< /text >}}
+```
 
 这里发生了什么？如果 `my-service` 在 **10 秒内连续返回两个 5xx 错误**，
 Istio 将停止向其发送流量。该服务将从负载均衡池中被逐出 **30 秒**，然后再重新考虑。
