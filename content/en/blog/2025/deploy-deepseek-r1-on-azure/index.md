@@ -1,5 +1,5 @@
 ---
-title: "Easily Deploy DeepSeek-R1 with Azure AI Foundry"
+title: "Easily Deploy and use DeepSeek-R1 with Azure AI Foundry"
 description: 
 publishdate: 2025-02-10
 attribution: "Wilson Wu"

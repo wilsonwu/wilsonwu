@@ -1,5 +1,5 @@
 ---
-title: "玩转大语言模型：基于 Azure AI Foundry  轻松部署 DeepSeek-R1"
+title: "玩转大语言模型：基于 Azure AI Foundry 轻松部署使用 DeepSeek-R1"
 description: 
 publishdate: 2025-02-10
 attribution: "Wilson Wu"
