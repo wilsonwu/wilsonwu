@@ -28,15 +28,15 @@ DeepSeek 的爆火让人们再一次看到了 AI 的魅力，而随之而来的�
 
 ![DeepSeek](1-deepseek.png)
 
-其中，第一个是全量版 DeepSeek-R1 610B 模型：
+其中，第一个是全量版 DeepSeek-R1 671B 模型：
 
-![DeepSeek-R1 610B](1-deepseek-r1-610b.png)
+![DeepSeek-R1 671B](1-deepseek-r1-671b.png)
 
 另一个是经过 NPU 优化的基于 Qwen 的 DeepSeek-R1 1.5B 蒸馏版：
 
 ![DeepSeek R1 Qwen 1.5B](1-deepseek-r1-qwen-1.5b.png)
 
-我们选择 610B 版本进行部署尝试，进入模型详情后点击 Deploy 进行部署确认：
+我们选择 671B 版本进行部署尝试，进入模型详情后点击 Deploy 进行部署确认：
 
 ![部署 DeepSeek-R1](1-deploy-deepseek.png)
 
@@ -44,7 +44,7 @@ DeepSeek 的爆火让人们再一次看到了 AI 的魅力，而随之而来的�
 
 ![模型详情](1-deployed-model-detail.png)
 
-至此 DeepSeek-R1 610B 部署完成，整个过程非常简单。
+至此 DeepSeek-R1 671B 部署完成，整个过程非常简单。
 
 ## 调用 DeepSeek-R1 进行推理
 

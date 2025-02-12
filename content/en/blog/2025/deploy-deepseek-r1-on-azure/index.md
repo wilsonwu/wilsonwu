@@ -26,15 +26,15 @@ Enter "DeepSeek" in the search box to view the types of DeepSeek models supporte
 
 ![DeepSeek](1-deepseek.png)
 
-The first one is the full version of the DeepSeek-R1 610B model:
+The first one is the full version of the DeepSeek-R1 671B model:
 
-![DeepSeek-R1 610B](1-deepseek-r1-610b.png)
+![DeepSeek-R1 671B](1-deepseek-r1-671b.png)
 
 Another is the NPU-optimized distilled version of DeepSeek-R1 1.5B based on Qwen:
 
 ![DeepSeek R1 Qwen 1.5B](1-deepseek-r1-qwen-1.5b.png)
 
-We will choose the 610B version for deployment. Enter the model details and click Deploy to confirm the deployment:
+We will choose the 671B version for deployment. Enter the model details and click Deploy to confirm the deployment:
 
 ![Deploy DeepSeek-R1](1-deploy-deepseek.png)
 
@@ -42,7 +42,7 @@ Click Deploy again to complete the deployment. After the deployment is finished,
 
 ![Model Details](1-deployed-model-detail.png)
 
-At this point, the deployment of DeepSeek-R1 610B is complete, and the entire process is very simple.
+At this point, the deployment of DeepSeek-R1 671B is complete, and the entire process is very simple.
 
 ## Invoking DeepSeek-R1 for Inference
 
