@@ -8,10 +8,10 @@ tags: [azure,ai,llm,microsoft,vllm,pd,python,opensource,huggingface]
 
 大模型在推理部署时，往往存在**显存瓶颈**：
 
-* 模型参数 (Parameters, P) 动辄上百 GB，需要长期驻留显存。
-* 输入/输出数据 (Data, D) 则随请求动态变化，但往往和参数耦合在同一设备上，导致显存占用不均衡，扩展性受限。
+* 模型参数（Parameters, P）动辄上百 GB，需要长期驻留显存。
+* 输入/输出数据（Data, D）则随请求动态变化，但往往和参数耦合在同一设备上，导致显存占用不均衡，扩展性受限。
 
-为了解决这一问题，可以借助 **vLLM 框架**实现**参数 / 数据 (P/D) 分离**，提升推理系统的灵活性和吞吐。
+为了解决这一问题，可以借助 **vLLM 框架**实现**参数 / 数据（P/D）分离**，提升推理系统的灵活性和吞吐。
 
 ## 大模型推理的资源瓶颈
 
@@ -25,7 +25,7 @@ tags: [azure,ai,llm,microsoft,vllm,pd,python,opensource,huggingface]
 1. 参数长期驻留，挤压了用于动态数据的显存；
 2. 多实例并发时，数据显存不足，限制了吞吐。
 
-因此，在分布式推理系统中，业界逐渐采用 **参数与数据分离 (P/D Separation)** 的架构思路。
+因此，在分布式推理系统中，业界逐渐采用 **参数与数据分离（P/D Separation）** 的架构思路。
 
 ## vLLM 简介
 
@@ -41,13 +41,13 @@ vLLM 的模块化架构，使其天然适合实现 **P/D 分离**。
 
 在 vLLM 中，推理流程大致分为两个部分：
 
-1. **参数侧 (P)**
+1. **参数侧（P）**
 
    * 模型权重加载与存放；
    * 可通过 **ZeRO-3 / Tensor Parallel** 等策略将参数分布在多 GPU 节点上；
    * 参数在整个推理生命周期中保持常驻，不随请求波动。
 
-2. **数据侧 (D)**
+2. **数据侧（D）**
 
    * 动态输入序列、KV Cache、采样状态等；
    * 可使用 **PagedAttention** 管理显存分页；
@@ -57,8 +57,8 @@ vLLM 的模块化架构，使其天然适合实现 **P/D 分离**。
 
 其核心机制是显存资源隔离：
 
-* **权重 (P)** 固定驻留在专门的 GPU（参数节点）；
-* **数据 (D)** 可以按需分配到其他 GPU（数据节点），甚至利用 CPU 内存 / NVMe。
+* **权重（P）** 固定驻留在专门的 GPU（参数节点）；
+* **数据（D）** 可以按需分配到其他 GPU（数据节点），甚至利用 CPU 内存 / NVMe。
 
 这样：
 
@@ -69,12 +69,12 @@ vLLM 的模块化架构，使其天然适合实现 **P/D 分离**。
 
 实现 P/D 分离的常见方法：
 
-1. **参数分片 (Parameter Sharding)**
+1. **参数分片（Parameter Sharding）**
 
    * 借助 vLLM 对 Megatron-LM / DeepSpeed 的支持，将模型参数按张量维度切分到多 GPU；
    * 仅在推理计算时聚合，不需要在每个设备上完整存放参数。
 
-2. **KV Cache 分离 (Data Sharding)**
+2. **KV Cache 分离（Data Sharding）**
 
    * 通过 vLLM 的 **PagedAttention**，可以把 KV Cache 存在独立的 GPU 或 Host 内存；
    * 在推理过程中按需调页，类似操作系统的虚拟内存机制。
@@ -126,19 +126,19 @@ python -m vllm.entrypoints.api_server \
 ```python
 from vllm import LLM, SamplingParams
 
-# -------- 参数 (P) 分离 --------
-# tensor_parallel_size=2 表示参数分布在前两张 GPU (0,1)
+# -------- 参数（P）分离 --------
+# tensor_parallel_size=2 表示参数分布在前两张 GPU（0,1）
 llm = LLM(
     model="/path/to/llama-2-70b",
     tensor_parallel_size=2,
     gpu_memory_utilization=0.85,
     enforce_eager=True,       # 避免显存碎片
     enable_chunked_prefill=True,
-    kv_cache_dtype="fp16"     # 数据 (D) 使用更轻量的缓存精度
+    kv_cache_dtype="fp16"     # 数据（D）使用更轻量的缓存精度
 )
 
-# -------- 数据 (D) 分离 --------
-# PagedAttention 会自动管理 KV Cache 的存放位置（GPU2,3,甚至CPU内存）
+# -------- 数据（D）分离 --------
+# PagedAttention 会自动管理 KV Cache 的存放位置（GPU2, 3, 甚至 CPU 内存）
 sampling_params = SamplingParams(
     temperature=0.8,
     top_p=0.95,
@@ -177,6 +177,6 @@ for output in outputs:
 ## 总结
 
 vLLM 框架凭借其高效的 KV Cache 管理和分布式能力，为 **大模型推理的 P/D 分离** 提供了坚实基础。
-通过将 **参数 (P)** 和 **数据 (D)** 解耦，可以更好地利用硬件资源，提升推理性能与扩展性。
+通过将 **参数（P）** 和 **数据（D）** 解耦，可以更好地利用硬件资源，提升推理性能与扩展性。
 
-未来，随着 **混合精度存储、分层缓存 (GPU+CPU+NVMe)** 的发展，P/D 分离架构将逐渐成为大模型推理的主流范式。
+未来，随着 **混合精度存储、分层缓存（GPU+CPU+NVMe）** 的发展，P/D 分离架构将逐渐成为大模型推理的主流范式。
