@@ -1,7 +1,7 @@
 ---
 title: "玩转大语言模型：轻松使用 Azure AI Foundry 提供的 Sora 2 生成视频"
 description: 
-publishdate: 2025-02-10
+publishdate: 2025-11-10
 attribution: "Wilson Wu"
 tags: [azure,ai,sore2,sore,llm,python,openai]
 ---
