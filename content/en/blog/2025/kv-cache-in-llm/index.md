@@ -1,5 +1,5 @@
 ---
-title: "Understanding KV-Cache - The Core Acceleration Technology for Model Inference"
+title: "Understanding KV-Cache - The Core Acceleration Technology for LLM Inference"
 description: 
 publishdate: 2025-11-18
 attribution: "Wilson Wu"
