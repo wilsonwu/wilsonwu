@@ -18,7 +18,7 @@ Fara-7B is a 7 billion parameter model built on [Qwen2.5-VL-7B](https://arxiv.or
 * **Efficient and Compact**: Despite having only 7B parameters, it achieves state-of-the-art performance in its class, even competing with larger models on certain benchmarks.
 * **On-Device Execution**: Due to its small size, it can run locally on devices, reducing latency and improving privacy.
 
-![Usage](2-useage.png)
+![Usage](2-usage.png)
 
 ## Core Technology
 
