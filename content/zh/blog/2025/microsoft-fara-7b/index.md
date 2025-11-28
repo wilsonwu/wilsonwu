@@ -1,7 +1,7 @@
 ---
 title: "Fara-7B：微软推出的高效电脑操作代理模型"
 description: "介绍微软最新发布的 Fara-7B 模型，这是一个专为电脑操作设计的 7B 参数模型，以及如何通过 vLLM 进行部署和使用。"
-publishdate: 2025-11-29
+publishdate: 2025-11-28
 attribution: "Wilson Wu"
 tags: [microsoft,ai,slm,agent,vllm,fara-7b]
 ---

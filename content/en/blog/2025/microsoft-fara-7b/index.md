@@ -1,7 +1,7 @@
 ---
 title: "Fara-7B: Microsoft's Efficient Agentic Model for Computer Use"
 description: "Introducing Microsoft's newly released Fara-7B model, a 7B parameter model designed for computer use, and how to deploy and use it via vLLM."
-publishdate: 2025-11-29
+publishdate: 2025-11-28
 attribution: "Wilson Wu"
 tags: [microsoft,ai,slm,agent,vllm,fara-7b]
 ---
