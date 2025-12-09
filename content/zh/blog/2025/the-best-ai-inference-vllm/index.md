@@ -8,7 +8,7 @@ tags: [ai,llm,vllm,inference,python,opensource,mlops]
 
 原文链接：[The Best Choice for AI Inference -> vLLM](https://medium.com/open-5g-hypercore/episode-xxx-the-best-choice-for-ai-inference-vllm-286b2af2df71)
 
-> 注意：为避免广告嫌疑，本文中移除了特定产品和品牌的商业宣传内容，仅保留技术特性及企业级产品功能描述，相关内容请以原文为准。
+> 注意：本译文已获得的原文作者翻译授权，为避免广告嫌疑，本文中移除了特定产品和品牌的商业宣传内容，仅保留技术特性及企业级产品功能描述，相关内容请以原文为准。
 
 ![AI 推理的最佳选择 - vLLM](1-vllm.png)
 
