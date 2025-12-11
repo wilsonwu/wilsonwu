@@ -1,5 +1,5 @@
 ---
-title: "Mastering Large Language Models: A Beginner's Guide to LLM Architectures"
+title: "A Beginner's Guide to LLM Architectures"
 description: 
 publishdate: 2025-12-10
 attribution: "Wilson Wu"
