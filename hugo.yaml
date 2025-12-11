@@ -59,6 +59,7 @@ params:
   homeInfoParams:
     Title: Welcome!
     Content: Cloud Native, Enterprise Application, Open Source and AI!
+  copyright: "Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>"
   fuseOpts:
     includeScore: true
     includeMatches: true
