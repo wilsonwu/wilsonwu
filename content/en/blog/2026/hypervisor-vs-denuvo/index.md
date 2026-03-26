@@ -1,9 +1,9 @@
 ---
 title: "Are AAA Games Falling One by One? An In-Depth Look at the Hypervisor Cracking Controversy"
 description:
-publishdate: 2026-01-25
+publishdate: 2026-03-26
 attribution: "Wilson Wu"
-tags: [azure,ai,clawdbot,llm,vm,agent]
+tags: [3a,game,hypervisor,denuvo,crack]
 ---
 
 ![Cracking Denuvo](1-crack-denuvo.png)

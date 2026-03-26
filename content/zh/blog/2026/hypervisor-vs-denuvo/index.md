@@ -1,9 +1,9 @@
 ---
 title: "3A 大作集体“沦陷”？深度解析 Hypervisor 破解风波"
 description: 
-publishdate: 2026-01-25
+publishdate: 2026-03-26
 attribution: "Wilson Wu"
-tags: [azure,ai,clawdbot,llm,vm,agent]
+tags: [3a,game,hypervisor,denuvo,crack]
 ---
 
 ![破解 D 加密](1-crack-denuvo.png)
