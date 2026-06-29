@@ -1,6 +1,5 @@
 ---
 title: "About the Author"
-description: "Author profile, LinkedIn, GitHub, and related links for Wilson Wu."
 hidemeta: true
 disableShare: true
 comments: false

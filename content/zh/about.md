@@ -1,6 +1,5 @@
 ---
 title: "关于作者"
-description: "Wilson Wu 的作者简介、LinkedIn、GitHub 与相关主页。"
 hidemeta: true
 disableShare: true
 comments: false
