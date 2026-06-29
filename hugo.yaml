@@ -29,6 +29,9 @@ menus:
   - name: Azure 101
     pageRef: /blog/azure-101
     weight: 90
+  - name: About
+    pageRef: /about
+    weight: 95
   - name: All Articles
     pageRef: /archives
     weight: 100
