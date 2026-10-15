@@ -4,6 +4,9 @@ description: 随着各组织从大语言模型（LLM）的试验阶段迈向生�
 publishdate: 2025-10-15
 attribution: "Fatih E. NAR, Greg Pereira, Yuan Tang, Robert Shaw, Anish Asthana. Translated by Wilson Wu"
 tags: [ai,llm,vllm,inference,python,opensource,mlops]
+aliases:
+    # Pre-/zh/ URL; remove it if an English version of this post is added.
+    - /blog/2025/the-best-ai-inference-vllm/
 ---
 
 原文链接：[The Best Choice for AI Inference -> vLLM](https://medium.com/open-5g-hypercore/episode-xxx-the-best-choice-for-ai-inference-vllm-286b2af2df71)

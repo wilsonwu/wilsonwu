@@ -10,7 +10,7 @@ tags: [ai,llm,model,microsoft,azure,foundry,decision,system-one,jev,laya,agent,o
 
 ## 引言
 
-上个月我写了一篇 [Jev vs Laya](/blog/2026/jev-vs-laya/)，对比了 TypeSafe AI 的闭源决策模型 Jev 和社区开源的 Laya。那时“决策模型”还是一个刚刚诞生的新品类：9 月 15 日 Jev 发布，三天后 Laya 开源。
+上个月我写了一篇 [Jev vs Laya](/zh/blog/2026/jev-vs-laya/)，对比了 TypeSafe AI 的闭源决策模型 Jev 和社区开源的 Laya。那时“决策模型”还是一个刚刚诞生的新品类：9 月 15 日 Jev 发布，三天后 Laya 开源。
 
 仅仅三周之后，这个赛道就挤满了玩家：10 月 6 日，OpenAI 开放了基于 GPT-6 Luna 的 Decisions API；Liquid AI、Inception 等公司也陆续推出了自己的决策 API；第三方榜单 JevBench 上参与排名的开源权重系统已经超过 140 个。10 月 9 日，微软也正式入局，发布了 **Microsoft-Decision-1**。
 
@@ -128,7 +128,7 @@ tags: [ai,llm,model,microsoft,azure,foundry,decision,system-one,jev,laya,agent,o
 
 ![用决策模型给 Agent 加一道闸门](3-agent-decision-gate.png)
 
-另一个值得一提的场景是**模型路由**：根据请求的质量、成本和延迟要求，选择最合适的模型来处理。我之前写过一篇 [让模型自己选模型：Embedding 驱动的 LLM 智能路由机制](/blog/2026/llm-smart-router/)，决策模型提供了另一种思路：不再依赖向量相似度，而是直接把“该交给哪个模型”当成一道 `choice` 题来回答。
+另一个值得一提的场景是**模型路由**：根据请求的质量、成本和延迟要求，选择最合适的模型来处理。我之前写过一篇 [让模型自己选模型：Embedding 驱动的 LLM 智能路由机制](/zh/blog/2026/llm-smart-router/)，决策模型提供了另一种思路：不再依赖向量相似度，而是直接把“该交给哪个模型”当成一道 `choice` 题来回答。
 
 ## 三条技术路线
 
@@ -462,4 +462,4 @@ Microsoft-Decision-1 的官方文档给出了不少实用的建议，它们同�
 * [JevBench：Open-weights decision model leaderboard](https://benchmarkheaven.com/jev-models)
 * [TypeSafe 文档：Models](https://docs.typesafe.ai/models)
 * [Laya GitHub 仓库](https://github.com/NandhaKishorM/laya)
-* [Jev vs Laya：闭源与开源 System One 决策模型的对比与选型](/blog/2026/jev-vs-laya/)
+* [Jev vs Laya：闭源与开源 System One 决策模型的对比与选型](/zh/blog/2026/jev-vs-laya/)

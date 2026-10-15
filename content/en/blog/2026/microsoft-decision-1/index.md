@@ -4,13 +4,15 @@ description:
 publishdate: 2026-10-10
 attribution: "Wilson Wu"
 tags: [ai,llm,model,microsoft,azure,foundry,decision,system-one,jev,laya,agent,opensource]
+aliases:
+    - /en/blog/2026/microsoft-decision-1/
 ---
 
 ![Microsoft-Decision-1, Jev, and Laya](1-microsoft-decision-1.png)
 
 ## Introduction
 
-Last month I wrote [Jev vs Laya](/en/blog/2026/jev-vs-laya/), comparing TypeSafe AI's closed-source decision model Jev with the community's open-source Laya. Back then, "decision models" were a brand-new category: Jev launched on September 15, and Laya was open-sourced three days later.
+Last month I wrote [Jev vs Laya](/blog/2026/jev-vs-laya/), comparing TypeSafe AI's closed-source decision model Jev with the community's open-source Laya. Back then, "decision models" were a brand-new category: Jev launched on September 15, and Laya was open-sourced three days later.
 
 Just three weeks later, the field is crowded: on October 6, OpenAI opened its Decisions API built on GPT-6 Luna; companies such as Liquid AI and Inception have launched their own decision APIs; and the third-party leaderboard JevBench now ranks more than 140 open-weight systems. On October 9, Microsoft joined the race with **Microsoft-Decision-1**.
 
@@ -126,7 +128,7 @@ The most interesting of these is **agent control**. Today's agents make lots of 
 
 ![Adding a decision gate to an agent](3-agent-decision-gate.png)
 
-Another scenario worth mentioning is **model routing**: picking the best model for a request based on its quality, cost, and latency requirements. I previously wrote [Let Models Choose Models: Embedding-Driven Smart Routing for LLMs](/en/blog/2026/llm-smart-router/), and decision models offer another approach: instead of relying on vector similarity, you simply treat "which model should handle this?" as a `choice` question.
+Another scenario worth mentioning is **model routing**: picking the best model for a request based on its quality, cost, and latency requirements. I previously wrote [Let Models Choose Models: Embedding-Driven Smart Routing for LLMs](/blog/2026/llm-smart-router/), and decision models offer another approach: instead of relying on vector similarity, you simply treat "which model should handle this?" as a `choice` question.
 
 ## Three Technical Approaches
 
@@ -460,4 +462,4 @@ Looking at the bigger picture, Microsoft-Decision-1 is more than "yet another de
 * [JevBench: Open-weights decision model leaderboard](https://benchmarkheaven.com/jev-models)
 * [TypeSafe docs: Models](https://docs.typesafe.ai/models)
 * [Laya GitHub repository](https://github.com/NandhaKishorM/laya)
-* [Jev vs Laya: Comparing and Choosing Between Closed-Source and Open-Source System One Decision Models](/en/blog/2026/jev-vs-laya/)
+* [Jev vs Laya: Comparing and Choosing Between Closed-Source and Open-Source System One Decision Models](/blog/2026/jev-vs-laya/)

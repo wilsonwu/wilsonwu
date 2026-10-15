@@ -4,6 +4,8 @@ description:
 publishdate: 2026-08-03
 attribution: "Wilson Wu"
 tags: [azure,ai,vllm,vsr,vllm-sr,semantic-router,embedding,llm,remote]
+aliases:
+    - /en/blog/2026/azure-foundry-embeddings-with-vllm-sr/
 ---
 
 ## 1. Introduction

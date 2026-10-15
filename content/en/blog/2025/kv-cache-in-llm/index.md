@@ -4,6 +4,8 @@ description:
 publishdate: 2025-11-18
 attribution: "Wilson Wu"
 tags: [ai,kv-cache,llm,python,openai]
+aliases:
+    - /en/blog/2025/kv-cache-in-llm/
 ---
 
 As large language models (LLMs) continue to grow in scale, the cost of inference has skyrocketed. To enable models to respond to user requests faster and more economically, various optimization techniques have emerged. Among them, **KV-Cache (Key-Value Cache)** stands out as one of the most critical and impactful inference acceleration mechanisms, widely adopted by all major inference frameworks (e.g., vLLM, TensorRT-LLM, LLama.cpp, llm-d, OpenAI Triton Transformer Engine, etc.).

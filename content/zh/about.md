@@ -15,7 +15,7 @@ Wilson Wu 是一位拥有近 20 年云原生企业解决方案及 AI 商业应�
 
 - LinkedIn: [linkedin.com/in/iwilsonwu](https://www.linkedin.com/in/iwilsonwu/)
 - GitHub: [github.com/wilsonwu](https://github.com/wilsonwu)
-- 个人网站: [wilsonwu.me](https://wilsonwu.me/)
+- 个人网站: [wilsonwu.me](https://wilsonwu.me/zh/)
 
 ## 关注方向
 

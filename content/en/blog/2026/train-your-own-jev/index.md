@@ -4,13 +4,15 @@ description:
 publishdate: 2026-10-14
 attribution: "Wilson Wu"
 tags: [ai,llm,model,jev,decision,system-one,training,lora,qwen,calibration,gpu,opensource]
+aliases:
+    - /en/blog/2026/train-your-own-jev/
 ---
 
 ![Train Your Own Jev](1-train-your-own-jev.png)
 
 ## Introduction
 
-Over the past month I've written two articles on decision models: [Jev vs Laya](/en/blog/2026/jev-vs-laya/) compared the closed-source Jev with the open-source Laya, and [Microsoft-Decision-1 Explained](/en/blog/2026/microsoft-decision-1/) added Microsoft to the picture. The question I've been asked most since then is: **can I train one myself?**
+Over the past month I've written two articles on decision models: [Jev vs Laya](/blog/2026/jev-vs-laya/) compared the closed-source Jev with the open-source Laya, and [Microsoft-Decision-1 Explained](/blog/2026/microsoft-decision-1/) added Microsoft to the picture. The question I've been asked most since then is: **can I train one myself?**
 
 Yes, you can, and the bar is lower than you might think. Just look at the third-party leaderboard JevBench: as of mid-October, its open-weights board ranks more than 160 systems, the vast majority built by the community and small teams. The ones at the top aren't mysterious either: H2O-Lightning-4B, first on the composite score, is a fine-tune of Alibaba's open-source Qwen3.5-4B; Quyet-1.0-Large, first on the capability score, is Gemma-4-31B plus an adapter; and Microsoft's own Microsoft-Decision-1 is also built on the open-source Qwen3.5-9B.
 
@@ -106,7 +108,7 @@ Jev calls its training method RLCD (Reinforcement Learning for Calibrated Decisi
 
 * **Reward**: a combination of three strictly proper scores, `Reward = S_log + 0.5 × S_sph − RPS`, where RPS only applies to ordinal score questions;
 * **Exploration**: for each question, 8 sets of Gaussian noise are added to the logits (the noise is centered across the options, because adding the same constant to all logits doesn't change the softmax), with the standard deviation decaying from 1.0 to 0.3;
-* **Advantage**: the 8 rewards minus the group mean, divided by the group standard deviation, the same idea as GRPO's group baseline (for how GRPO works, see my earlier [PPO vs GRPO](/en/blog/2026/ppo-vs-grpo/));
+* **Advantage**: the 8 rewards minus the group mean, divided by the group standard deviation, the same idea as GRPO's group baseline (for how GRPO works, see my earlier [PPO vs GRPO](/blog/2026/ppo-vs-grpo/));
 * **Update**: a REINFORCE-style policy gradient using the Gaussian log-density, with no cross-entropy loss at all.
 
 My take: **when the model outputs the full probability distribution, the scoring rule itself is differentiable. Taking its gradient directly (that is, using the scoring rule as the loss) and estimating that gradient with reinforcement learning point in the same direction in expectation, and the former has lower variance and is simpler.** The RL formulation becomes truly irreplaceable when the reward can't be differentiated with respect to the output: for example, when it comes from whether a multi-step agent task eventually succeeds, from real user feedback, or from the multi-turn sales conversations Laya handles, where the reward is whether the deal finally closes and TD(λ) is needed to spread that outcome over the turns.
@@ -1071,7 +1073,7 @@ Jev defined the "decision model" category, and in just one month the open-source
 * [Zheng et al.: Large Language Models Are Not Robust Multiple Choice Selectors (2023)](https://arxiv.org/abs/2309.03882)
 * [Wei et al.: Finetuned Language Models Are Zero-Shot Learners (2021)](https://arxiv.org/abs/2109.01652)
 * [Hu et al.: LoRA: Low-Rank Adaptation of Large Language Models (2021)](https://arxiv.org/abs/2106.09685)
-* [Jev vs Laya: Comparing and Choosing Between Closed-Source and Open-Source System One Decision Models](/en/blog/2026/jev-vs-laya/)
-* [Microsoft-Decision-1 Explained: Microsoft Joins the Decision Model Race, Compared with Jev and Laya](/en/blog/2026/microsoft-decision-1/)
-* [A Comprehensive Guide to LLM Fine-Tuning: Methods, Comparisons, and Best-Fit Scenarios](/en/blog/2025/llm-fine-tuning/)
-* [PPO vs GRPO: Comparing and Choosing Between Two Mainstream LLM Reinforcement Learning Paradigms](/en/blog/2026/ppo-vs-grpo/)
+* [Jev vs Laya: Comparing and Choosing Between Closed-Source and Open-Source System One Decision Models](/blog/2026/jev-vs-laya/)
+* [Microsoft-Decision-1 Explained: Microsoft Joins the Decision Model Race, Compared with Jev and Laya](/blog/2026/microsoft-decision-1/)
+* [A Comprehensive Guide to LLM Fine-Tuning: Methods, Comparisons, and Best-Fit Scenarios](/blog/2025/llm-fine-tuning/)
+* [PPO vs GRPO: Comparing and Choosing Between Two Mainstream LLM Reinforcement Learning Paradigms](/blog/2026/ppo-vs-grpo/)

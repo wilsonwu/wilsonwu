@@ -14,7 +14,7 @@ tags: [azure,ai,sore2,sore,llm,python,openai]
 
 ### 获取 Azure 订阅
 
-拥有一个 **Azure 订阅**，如果您不清楚如何获取 Azure 订阅，可以参考[之前文章中的注册 Azure 订阅内容](/blog/2024/build-own-chatgpt-on-azure/#先决条件)进行操作。
+拥有一个 **Azure 订阅**，如果您不清楚如何获取 Azure 订阅，可以参考[之前文章中的注册 Azure 订阅内容](/zh/blog/2024/build-own-chatgpt-on-azure/#先决条件)进行操作。
 
 ### 创建 Azure AI Foundry
 

@@ -4,11 +4,13 @@ description:
 publishdate: 2026-09-28
 attribution: "Wilson Wu"
 tags: [openwebui,microsoft,webiq,websearch,llm,ai,agent,opensource]
+aliases:
+    - /en/blog/2026/microsoft-web-iq-in-openwebui/
 ---
 
 ![OpenWebUI connected to Microsoft Web IQ](1-openwebui-web-iq.png)
 
-In my [previous article](/en/blog/2026/migrate-openwebui-to-azure-pg/), I migrated the OpenWebUI database to Azure Database for PostgreSQL. In my day-to-day use of OpenWebUI, I kept running into two problems:
+In my [previous article](/blog/2026/migrate-openwebui-to-azure-pg/), I migrated the OpenWebUI database to Azure Database for PostgreSQL. In my day-to-day use of OpenWebUI, I kept running into two problems:
 
 1. **No access to the latest information**: Models have a knowledge cutoff. When I ask about recent releases, news, or prices, they either can't answer or get it wrong.
 2. **Pasted links are never opened**: When I paste the URL of an article, a document, or a GitHub page into the chat and ask the model to summarize, translate, or compare it, the model doesn't read the link at all. Sometimes it even guesses content that "looks plausible" from the URL alone.

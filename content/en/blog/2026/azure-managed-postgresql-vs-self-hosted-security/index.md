@@ -4,6 +4,8 @@ description:
 publishdate: 2026-08-14
 attribution: "Wilson Wu"
 tags: [azure,pg,postgresql,vm,security,malware,incident]
+aliases:
+    - /en/blog/2026/azure-managed-postgresql-vs-self-hosted-security/
 ---
 
 ## Background

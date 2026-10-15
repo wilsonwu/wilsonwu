@@ -10,7 +10,7 @@ DeepSeek 的爆火让人们再一次看到了 AI 的魅力，而随之而来的�
 
 ## 先决条件
 
-首先需要拥有 Azure 订阅，新用户参考[玩转大语言模型：无需任何代码通过 Azure OpenAI 服务构建个人专属 ChatGPT](https://wilsonwu.me/blog/2024/build-own-chatgpt-on-azure/#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6)中步骤进行开通。然后在 Azure 订阅中创建 AI Foundry 及相关资源，可以参考[创建 Azure AI Foundry 服务](https://wilsonwu.me/blog/2024/build-own-chatgpt-on-azure/#%E6%AD%A5%E9%AA%A4-1%E5%88%9B%E5%BB%BA-azure-ai-studio-%E6%9C%8D%E5%8A%A1)中的步骤，这里不再赘述。
+首先需要拥有 Azure 订阅，新用户参考[玩转大语言模型：无需任何代码通过 Azure OpenAI 服务构建个人专属 ChatGPT](https://wilsonwu.me/zh/blog/2024/build-own-chatgpt-on-azure/#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6)中步骤进行开通。然后在 Azure 订阅中创建 AI Foundry 及相关资源，可以参考[创建 Azure AI Foundry 服务](https://wilsonwu.me/zh/blog/2024/build-own-chatgpt-on-azure/#%E6%AD%A5%E9%AA%A4-1%E5%88%9B%E5%BB%BA-azure-ai-studio-%E6%9C%8D%E5%8A%A1)中的步骤，这里不再赘述。
 
 一切完成后进入 Azure AI Foundry 首页，并打开名为 main 的 Project，界面如下：
 

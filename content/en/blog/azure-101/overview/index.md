@@ -5,7 +5,9 @@ publishdate: 2024-06-19
 attribution: "Wilson Wu"
 tags: [overview,azure,microsoft]
 aliases:
+    - /azure-101/overview/
     - /en/azure-101/overview/
+    - /en/blog/azure-101/overview/
 
 ---
 Azure is a cloud computing platform and service provided by Microsoft. It offers a range of infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) solutions for building, deploying, and managing various types of applications and services.

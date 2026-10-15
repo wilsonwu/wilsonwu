@@ -4,6 +4,8 @@ description:
 publishdate: 2026-08-17
 attribution: "Wilson Wu"
 tags: [envoy,ai,ratelimit,llm,tpm,rpm,inference]
+aliases:
+    - /en/blog/2026/envoy-ai-ratelimit/
 ---
 
 ![Overview](1-overview.png)

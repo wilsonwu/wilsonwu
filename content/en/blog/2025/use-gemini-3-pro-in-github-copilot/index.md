@@ -4,6 +4,8 @@ description:
 publishdate: 2025-11-20
 attribution: "Wilson Wu"
 tags: [ai,llm,github,copilot,gemini,google]
+aliases:
+    - /en/blog/2025/use-gemini-3-pro-in-github-copilot/
 ---
 
 As AI coding assistants continue to evolve, GitHub Copilot keeps introducing more powerful models for developers to choose from. Recently, GitHub Copilot announced support for Google's latest **Gemini 3 Pro** model (Preview). As a developer who uses Copilot daily, I tried it out immediately and found it surprisingly good at logical reasoning and long context understanding.

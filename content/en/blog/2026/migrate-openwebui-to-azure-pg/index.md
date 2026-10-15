@@ -4,6 +4,8 @@ description:
 publishdate: 2026-08-13
 attribution: "Wilson Wu"
 tags: [azure,pg,openwebui,llm,ai,python,migrate,postgresql]
+aliases:
+    - /en/blog/2026/migrate-openwebui-to-azure-pg/
 ---
 
 ![Migration](1-overview.png)

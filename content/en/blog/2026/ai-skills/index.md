@@ -4,6 +4,8 @@ description:
 publishdate: 2026-04-22
 attribution: "Wilson Wu"
 tags: [azure,ai,vscode,skill,claude,agent,ai-program,ai-coding,copilot]
+aliases:
+    - /en/blog/2026/ai-skills/
 ---
 
 ![The Skill Era of AI Programming](1-ai-skills.png)

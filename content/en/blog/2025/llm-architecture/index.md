@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-10
 attribution: "Wilson Wu"
 tags: [ai,llm,python,openai,architecture,beginner]
+aliases:
+    - /en/blog/2025/llm-architecture/
 ---
 
 Over the past five years, the development of Large Language Models (LLMs) has almost completely reshaped the technological landscape of artificial intelligence. From GPT to LLaMA, from Transformer to Mixture-of-Experts (MoE), and from monolithic models to large-scale distributed parameter server systems, architectural evolution has directly driven leaps in capability.

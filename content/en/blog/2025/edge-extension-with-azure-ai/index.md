@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-15
 attribution: "Wilson Wu"
 tags: [azure,ai,chrome,edge,extension,llm,autoaddr]
+aliases:
+    - /en/blog/2025/edge-extension-with-azure-ai/
 ---
 
 In the e-commerce and logistics sectors, there is an overlooked but extremely time-consuming pain point: **entering complex address formats correctly into fixed fields in logistics systems**. Addresses sent by customers come in all sorts of strange formats—sometimes comma-separated, sometimes all in one line, with completely random orders, and often missing key information like province or state.

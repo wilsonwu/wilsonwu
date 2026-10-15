@@ -3,7 +3,7 @@ title: "玩转大语言模型：为初学者扫清大语言模型（LLM）架构
 description: 
 publishdate: 2025-12-10
 attribution: "Wilson Wu"
-tags: [ai,llm,python,openai,architecture,begginer]
+tags: [ai,llm,python,openai,architecture,beginner]
 ---
 
 过去五年，大语言模型（Large Language Models, LLMs）的发展几乎完全重塑了人工智能的技术版图。从 GPT 到 LLaMA，从 Transformer 到 Mixture-of-Experts（MoE），从单体模型到大规模分布式参数服务器体系，架构演进直接推动了能力跃迁。

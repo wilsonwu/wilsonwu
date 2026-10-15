@@ -10,7 +10,7 @@ tags: [ai,llm,model,jev,decision,system-one,training,lora,qwen,calibration,gpu,o
 
 ## 引言
 
-过去一个月，我连续写了两篇决策模型的文章：[Jev vs Laya](/blog/2026/jev-vs-laya/) 对比了闭源的 Jev 和开源的 Laya，[Microsoft-Decision-1 详解](/blog/2026/microsoft-decision-1/) 又加入了微软。写完之后，被问得最多的问题是：**能不能自己训练一个？**
+过去一个月，我连续写了两篇决策模型的文章：[Jev vs Laya](/zh/blog/2026/jev-vs-laya/) 对比了闭源的 Jev 和开源的 Laya，[Microsoft-Decision-1 详解](/zh/blog/2026/microsoft-decision-1/) 又加入了微软。写完之后，被问得最多的问题是：**能不能自己训练一个？**
 
 答案是可以，而且门槛比想象中低。看看第三方榜单 JevBench 就知道：截至 10 月中旬，开源权重榜上已经有 160 多个参与排名的系统，绝大多数出自社区和中小团队之手。排在前面的也不神秘：综合分第一的 H2O-Lightning-4B 是在阿里开源的 Qwen3.5-4B 上微调出来的，能力分第一的 Quyet-1.0-Large 则是 Gemma-4-31B 加一个适配器；微软的 Microsoft-Decision-1，底座同样是开源的 Qwen3.5-9B。
 
@@ -106,7 +106,7 @@ Jev 把自己的训练方法称为 RLCD（Reinforcement Learning for Calibrated 
 
 * **奖励**：三种严格适当评分的组合，`Reward = S_log + 0.5 × S_sph − RPS`，其中 RPS 只对有序的 score 题生效；
 * **探索**：每道题对 logits 加 8 组高斯噪声（噪声在选项维度上减去均值，因为给所有 logits 加同一个常数不会改变 softmax），噪声的标准差从 1.0 逐步衰减到 0.3；
-* **优势**：8 个样本的奖励减去组内均值、除以组内标准差，和 GRPO 的组内基线是同一个思路（GRPO 的原理可以参考我之前写的 [PPO vs GRPO](/blog/2026/ppo-vs-grpo/)）；
+* **优势**：8 个样本的奖励减去组内均值、除以组内标准差，和 GRPO 的组内基线是同一个思路（GRPO 的原理可以参考我之前写的 [PPO vs GRPO](/zh/blog/2026/ppo-vs-grpo/)）；
 * **更新**：用高斯分布的对数密度做 REINFORCE 式的策略梯度，完全不使用交叉熵损失。
 
 我的理解是：**当模型直接输出完整的概率分布时，评分规则本身就是可微的，直接对它求梯度（也就是把评分规则当损失函数）和用强化学习去估计这个梯度，在期望上指向同一个方向，前者方差更小、更省事。** 强化学习的形式真正不可替代的场景，是奖励无法对输出直接求导的时候，比如奖励来自多步 Agent 任务最终是否成功、用户的真实反馈，或者 Laya 处理的多轮销售对话：奖励是对话最终是否成交，需要用 TD(λ) 把这个结果分摊到每一轮。
@@ -1071,7 +1071,7 @@ Jev 定义了“决策模型”这个品类，而短短一个月里，开源社�
 * [Zheng et al.：Large Language Models Are Not Robust Multiple Choice Selectors（2023）](https://arxiv.org/abs/2309.03882)
 * [Wei et al.：Finetuned Language Models Are Zero-Shot Learners（2021）](https://arxiv.org/abs/2109.01652)
 * [Hu et al.：LoRA: Low-Rank Adaptation of Large Language Models（2021）](https://arxiv.org/abs/2106.09685)
-* [Jev vs Laya：闭源与开源 System One 决策模型的对比与选型](/blog/2026/jev-vs-laya/)
-* [Microsoft-Decision-1 详解：微软入局决策模型，与 Jev、Laya 的三方对比](/blog/2026/microsoft-decision-1/)
-* [玩转大语言模型：大语言模型（LLM）微调主流方式和使用场景全面解析对比](/blog/2025/llm-fine-tuning/)
-* [PPO vs GRPO：两种主流 LLM 强化学习范式的对比与选择](/blog/2026/ppo-vs-grpo/)
+* [Jev vs Laya：闭源与开源 System One 决策模型的对比与选型](/zh/blog/2026/jev-vs-laya/)
+* [Microsoft-Decision-1 详解：微软入局决策模型，与 Jev、Laya 的三方对比](/zh/blog/2026/microsoft-decision-1/)
+* [玩转大语言模型：大语言模型（LLM）微调主流方式和使用场景全面解析对比](/zh/blog/2025/llm-fine-tuning/)
+* [PPO vs GRPO：两种主流 LLM 强化学习范式的对比与选择](/zh/blog/2026/ppo-vs-grpo/)

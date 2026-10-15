@@ -1,0 +1,13 @@
+{{- /* Pre-switch URLs of a content page (not 404 etc.): English lived under /en/, Chinese at the site root. */}}
+{{- $paths := slice }}
+{{- if in (slice "page" "home" "section" "taxonomy" "term") .Kind }}
+  {{- if eq .Lang "en" }}
+    {{- $paths = slice (printf "/en%s" .RelPermalink) }}
+  {{- else }}
+    {{- $paths = .Aliases }}
+    {{- if and (not .IsPage) (not .IsTranslated) }}
+      {{- $paths = $paths | append (strings.TrimPrefix "/zh" .RelPermalink) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- return $paths }}

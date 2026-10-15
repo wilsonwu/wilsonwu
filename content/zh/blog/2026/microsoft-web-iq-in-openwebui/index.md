@@ -8,7 +8,7 @@ tags: [openwebui,microsoft,webiq,websearch,llm,ai,agent,opensource]
 
 ![OpenWebUI 接入 Microsoft Web IQ](1-openwebui-web-iq.png)
 
-在[上一篇文章](/blog/2026/migrate-openwebui-to-azure-pg/)中，我把 OpenWebUI 的数据库迁移到了 Azure 托管 PostgreSQL。在日常使用 OpenWebUI 的过程中，我经常遇到两个问题：
+在[上一篇文章](/zh/blog/2026/migrate-openwebui-to-azure-pg/)中，我把 OpenWebUI 的数据库迁移到了 Azure 托管 PostgreSQL。在日常使用 OpenWebUI 的过程中，我经常遇到两个问题：
 
 1. **问不到最新的信息**：模型有知识截止时间，问到最近的版本发布、新闻或价格，要么答不上来，要么答错。
 2. **贴进去的链接不会被打开**：把文章、文档或 GitHub 页面的 URL 贴进对话框，想让模型总结、翻译或对比，模型却不会去读这个链接，有时甚至会根据 URL 猜出一段“看起来很像”的内容。

@@ -1,0 +1,50 @@
+{{- /* Keep the pre-switch URLs of this page working. */}}
+{{- $page := . }}
+{{- $paged := in (slice "home" "section" "term") .Kind }}
+{{- /* list.html builds the paginator after this head partial runs; it is safe to read only on later pager renders. */}}
+{{- $pagerReady := and $paged (.Scratch.Get "legacyPagerReady") }}
+{{- range partial "legacy_paths.html" . }}
+  {{- $dir := strings.TrimPrefix "/" . }}
+  {{- if $page.IsPage }}
+    {{- /* Bundle files (images), only for pages that existed before the switch. */}}
+    {{- if in $page.Aliases . }}
+      {{- range $page.Resources }}
+        {{- $file := strings.TrimPrefix $page.RelPermalink .RelPermalink }}
+        {{- (resources.Copy (path.Join $dir $file) .).Publish }}
+      {{- end }}
+    {{- end }}
+  {{- else }}
+    {{- if $page.OutputFormats.Get "rss" }}
+      {{- /* Old item GUIDs, so feed readers show no duplicates. */}}
+      {{- $rss := partial "legacy_rss.xml" $page }}
+      {{- if eq $page.Lang "en" }}
+        {{- $rss = replace $rss (printf "<guid>%s" site.BaseURL) (printf "<guid>%sen/" site.BaseURL) }}
+      {{- else }}
+        {{- $rss = replace $rss (printf "<guid>%szh/" site.BaseURL) (printf "<guid>%s" site.BaseURL) }}
+      {{- end }}
+      {{- (resources.FromString (path.Join $dir "index.xml") $rss).Publish }}
+    {{- end }}
+    {{- /* Hugo writes front matter aliases and the /en/ home redirect itself. */}}
+    {{- if not (or $page.IsHome (in $page.Aliases .)) }}
+      {{- (resources.FromString (path.Join $dir "index.html") (partial "redirect.html" $page.Permalink)).Publish }}
+    {{- end }}
+    {{- if and $page.IsHome (eq $page.Lang "en") }}
+      {{- /* Old search index, same fields as PaperMod's index.json. */}}
+      {{- $index := slice }}
+      {{- range site.RegularPages }}
+        {{- if and (not .Params.searchHidden) (ne .Layout "archives") (ne .Layout "search") }}
+          {{- $index = $index | append (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary) }}
+        {{- end }}
+      {{- end }}
+      {{- (resources.FromString (path.Join $dir "index.json") (jsonify $index)).Publish }}
+    {{- end }}
+    {{- if $pagerReady }}
+      {{- with $page.Paginator }}
+        {{- (resources.FromString (printf "%spage/%d/index.html" $dir .PageNumber) (partial "redirect.html" (absURL .URL))).Publish }}
+      {{- end }}
+    {{- else if $paged }}
+      {{- (resources.FromString (printf "%spage/1/index.html" $dir) (partial "redirect.html" $page.Permalink)).Publish }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if $paged }}{{ .Scratch.Set "legacyPagerReady" true }}{{ end -}}

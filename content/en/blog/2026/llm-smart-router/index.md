@@ -4,6 +4,8 @@ description:
 publishdate: 2026-05-26
 attribution: "Wilson Wu"
 tags: [azure,ai,embedding,gateway,llm,python,model,smart,semantic,router]
+aliases:
+    - /en/blog/2026/llm-smart-router/
 ---
 
 In an AI architecture where multiple models coexist, such as GPT-4, GPT-4o, lightweight models, and vertical-domain models, one core question is:

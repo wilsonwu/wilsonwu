@@ -4,6 +4,8 @@ description:
 publishdate: 2025-10-28
 attribution: "Wilson Wu"
 tags: [ai,llm,lora,tuning,sft]
+aliases:
+    - /en/blog/2025/llm-fine-tuning/
 ---
 
 As enterprises build AI-powered applications, **fine-tuning large language models (LLMs)** has become essential for delivering customized capabilities. Over the years, fine-tuning techniques have evolved from traditional full-parameter training to efficient, low-cost approaches such as LoRA, QLoRA, Adapters, supervised fine-tuning (SFT), reward modeling (RM), and RLHF.

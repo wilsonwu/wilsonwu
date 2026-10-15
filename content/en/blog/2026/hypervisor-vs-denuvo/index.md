@@ -4,6 +4,8 @@ description:
 publishdate: 2026-03-26
 attribution: "Wilson Wu"
 tags: [3a,game,hypervisor,denuvo,crack]
+aliases:
+    - /en/blog/2026/hypervisor-vs-denuvo/
 ---
 
 ![Cracking Denuvo](1-crack-denuvo.png)

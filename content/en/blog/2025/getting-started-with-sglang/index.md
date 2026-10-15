@@ -4,6 +4,8 @@ description: This article takes you from zero to hands-on with SGLang, what it i
 publishdate: 2025-07-10
 attribution: "Wilson Wu"
 tags: [azure,ai,llm,sglang,vllm,inference,python]
+aliases:
+    - /en/blog/2025/getting-started-with-sglang/
 ---
 
 As large language models (LLMs) grow in popularity, the focus for enterprises and individuals has shifted from training to inference (in other words, moving from “building wheels” to practical usage). In the field of inference, the two hottest frameworks are undoubtedly vLLM and SGLang. As a rising star, SGLang has also attracted attention. Today, we’ll explore SGLang through a beginner-friendly tutorial to help more people understand both LLM inference and the SGLang framework.

@@ -4,6 +4,8 @@ description:
 publishdate: 2026-06-28
 attribution: "Wilson Wu"
 tags: [ai,training,ppo,grpo,glm,llm,model]
+aliases:
+    - /en/blog/2026/ppo-vs-grpo/
 ---
 
 ## Introduction

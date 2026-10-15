@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-17
 attribution: "Wilson Wu"
 tags: [azure,ai,openai,llm,gpt-image-1.5,text-to-image]
+aliases:
+    - /en/blog/2025/azure-openai-gpt-image/
 ---
 
 ![GPT-Image-1.5](0-gpt-image-1.5.png)

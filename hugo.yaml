@@ -1,7 +1,7 @@
 title: Wilson Wu
 baseURL: https://wilsonwu.me/
 theme: PaperMod
-defaultContentLanguage: zh
+defaultContentLanguage: en
 googleAnalytics: G-SYXWVNYJHY
 enableRobotsTXT: true
 paginate: 15
@@ -9,19 +9,19 @@ paginate: 15
 taxonomies:
     tag: "tags"
 
-# internationalization
+# internationalization: English at the site root, Chinese under /zh/
 languages:
-  zh:
-    languageCode: zh-CN
-    languageDirection: ltr
-    contentDir: content/zh
-    languageName: Chinese
-    weight: 1
   en:
     languageCode: en-US
     languageDirection: ltr
     contentDir: content/en
     languageName: English
+    weight: 1
+  zh:
+    languageCode: zh-CN
+    languageDirection: ltr
+    contentDir: content/zh
+    languageName: Chinese
     weight: 2
 
 menus:

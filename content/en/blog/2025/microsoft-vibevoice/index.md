@@ -4,6 +4,8 @@ description: This article introduces how to use Microsoft’s newly open-sourced
 publishdate: 2025-09-18
 attribution: "Wilson Wu"
 tags: [azure,ai,llm,microsoft,tts,inference,python,opensource,huggingface]
+aliases:
+    - /en/blog/2025/microsoft-vibevoice/
 ---
 
 ## What is VibeVoice?

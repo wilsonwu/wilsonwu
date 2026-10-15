@@ -4,6 +4,8 @@ description:
 publishdate: 2026-07-08
 attribution: "Wilson Wu"
 tags: [ai,inference,llm,python,simulation,model,dev,no-gpu]
+aliases:
+    - /en/blog/2026/llm-inference-simulation/
 ---
 
 ![LLM inference simulation](1-llm-inference-simulation.png)

@@ -4,8 +4,6 @@ description: Azure 101 系列课程囊括了最全面的 Microsoft Azure 功能�
 publishdate: 2024-06-19
 attribution: "Wilson Wu"
 tags: [overview,azure,microsoft]
-aliases:
-    - /azure-101/overview/
 
 ---
 

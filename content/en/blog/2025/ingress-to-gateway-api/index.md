@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-01
 attribution: "Wilson Wu"
 tags: [kubernetes,ingress,nginx,envoy,gateway]
+aliases:
+    - /en/blog/2025/ingress-to-gateway-api/
 ---
 
 On **November 11, 2025**, the official Kubernetes blog formally announced that the **Ingress NGINX project has entered the Retirement phase** and will cease maintenance entirely in **March 2026**.

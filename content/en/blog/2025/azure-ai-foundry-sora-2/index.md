@@ -4,6 +4,8 @@ description:
 publishdate: 2025-11-10
 attribution: "Wilson Wu"
 tags: [azure,ai,sore2,sore,llm,python,openai]
+aliases:
+    - /en/blog/2025/azure-ai-foundry-sora-2/
 ---
 
 With Azure AI Foundry opening support for **Sora 2 (OpenAI's generative video model)**, developers can now access top-tier video generation capabilities in an enterprise-grade, compliant, and controllable environment. This tutorial will take you from zero to production, showing how to call Sora 2 via the **Playground** and the **Python SDK** to complete a "text-to-video" workflow.
@@ -14,7 +16,7 @@ Before starting, you need:
 
 ### Get an Azure subscription
 
-You need an **Azure subscription**. If you're unsure how to get one, [refer to the subscription registration section in my earlier article](/en/blog/2024/build-own-chatgpt-on-azure/#prerequisites).
+You need an **Azure subscription**. If you're unsure how to get one, [refer to the subscription registration section in my earlier article](/blog/2024/build-own-chatgpt-on-azure/#prerequisites).
 
 ### Create an Azure AI Foundry
 

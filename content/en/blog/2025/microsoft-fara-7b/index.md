@@ -4,6 +4,8 @@ description: "Introducing Microsoft's newly released Fara-7B model, a 7B paramet
 publishdate: 2025-11-28
 attribution: "Wilson Wu"
 tags: [microsoft,ai,slm,agent,vllm,fara-7b]
+aliases:
+    - /en/blog/2025/microsoft-fara-7b/
 ---
 
 ![Fara-7B](1-fara-7b.png)

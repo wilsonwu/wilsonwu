@@ -4,6 +4,8 @@ description:
 publishdate: 2026-01-25
 attribution: "Wilson Wu"
 tags: [azure,ai,clawdbot,llm,vm,agent]
+aliases:
+    - /en/blog/2026/clawdbot-on-azure/
 ---
 
 ![Clawdbot](1-clawdbot.png)

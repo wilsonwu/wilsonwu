@@ -3,6 +3,8 @@ title: "About the Author"
 hidemeta: true
 disableShare: true
 comments: false
+aliases:
+    - /en/about/
 ---
 
 ## Wilson Wu

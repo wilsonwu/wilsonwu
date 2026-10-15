@@ -4,13 +4,15 @@ description:
 publishdate: 2025-02-10
 attribution: "Wilson Wu"
 tags: [azure,ai,deepseek,llm]
+aliases:
+    - /en/blog/2025/deploy-deepseek-r1-on-azure/
 ---
 
 The popularity of DeepSeek has once again showcased the charm of AI. However, this has not led to a reduction in the demand for computing power. Instead, it has brought about another wave of demand for computing power by building more AI business scenarios in low-cost, user-friendly artificial intelligence. Today, we will quickly experience the elegance of DeepSeek through Azure AI Foundry (formerly Azure AI Studio).
 
 ## Prerequisites
 
-First, you need to have an Azure subscription. New users can refer to the steps in [Building Your Own ChatGPT on Azure Without Any Code](https://wilsonwu.me/en/blog/2024/build-own-chatgpt-on-azure/#prerequisites) to get started. Then, create AI Foundry and related resources in your Azure subscription by following the steps in [Creating Azure AI Foundry Service](https://wilsonwu.me/en/blog/2024/build-own-chatgpt-on-azure/#step-1-create-azure-ai-studio-service). Once everything is set up, go to the Azure AI Foundry homepage and open the project named "main". The interface looks like this:
+First, you need to have an Azure subscription. New users can refer to the steps in [Building Your Own ChatGPT on Azure Without Any Code](https://wilsonwu.me/blog/2024/build-own-chatgpt-on-azure/#prerequisites) to get started. Then, create AI Foundry and related resources in your Azure subscription by following the steps in [Creating Azure AI Foundry Service](https://wilsonwu.me/blog/2024/build-own-chatgpt-on-azure/#step-1-create-azure-ai-studio-service). Once everything is set up, go to the Azure AI Foundry homepage and open the project named "main". The interface looks like this:
 
 ![Azure AI Foundry](0-ai-foundry.png)
 

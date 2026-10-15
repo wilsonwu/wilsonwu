@@ -4,6 +4,8 @@ description: As large language models grow in scale, inference deployment faces 
 publishdate: 2025-09-29
 attribution: "Wilson Wu"
 tags: [azure,ai,llm,microsoft,vllm,pd,python,opensource,huggingface]
+aliases:
+    - /en/blog/2025/vllm-pd-separation/
 ---
 
 Large language models often encounter **GPU memory bottlenecks** during inference deployment:

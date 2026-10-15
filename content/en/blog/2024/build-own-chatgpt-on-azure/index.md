@@ -4,6 +4,8 @@ description: Learn how to build your own personalized ChatGPT application using 
 publishdate: 2024-06-25
 attribution: "Wilson Wu"
 tags: [azure,ai,openai,chatgpt]
+aliases:
+    - /en/blog/2024/build-own-chatgpt-on-azure/
 ---
 
 Using ChatGPT to help us solve problems in our work and daily life has become a habit. However, after using the official GPT-4o heavily, we may encounter temporary quota issues. Today, we will show you how to easily build your own personalized ChatGPT application using Azure OpenAI services.

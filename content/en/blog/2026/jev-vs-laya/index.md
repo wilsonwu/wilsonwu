@@ -4,6 +4,8 @@ description:
 publishdate: 2026-09-23
 attribution: "Wilson Wu"
 tags: [ai,llm,model,jev,laya,typesafe,decision,system-one,agent,opensource,huggingface]
+aliases:
+    - /en/blog/2026/jev-vs-laya/
 ---
 
 ![Jev vs Laya: a closed cloud decision model and an open local one](1-jev-vs-laya.png)

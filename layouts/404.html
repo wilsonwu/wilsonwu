@@ -1,0 +1,15 @@
+{{- define "main" }}
+<div class="not-found">404</div>
+{{- /* Legacy URLs from when Chinese was the default language: English pages lived under /en/,
+       and Chinese-only pages (no English version) lived at the root. */}}
+<script>
+    (function () {
+        var p = location.pathname, rest = location.search + location.hash;
+        if (p.indexOf("/en/") === 0) {
+            location.replace(p.slice(3) + rest);
+        } else if (p.indexOf("/zh/") !== 0) {
+            location.replace("/zh" + p + rest);
+        }
+    })();
+</script>
+{{- end }}{{/* end main */ -}}

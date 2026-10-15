@@ -4,6 +4,9 @@ description: 翻译文章：了解 Luca Cavallin 使用 Istio 的经验。
 publishdate: 2024-10-10
 attribution: "Luca Cavallin - GitHub; Translated by Wilson Wu"
 tags: [istio,open-source,service-mesh,cncf]
+aliases:
+    # Pre-/zh/ URL; remove it if an English version of this post is added.
+    - /blog/2024/the-istio-service-mesh-for-people-who-have-stuff-to-do/
 ---
 
 [原文地址（英文）：The Istio Service Mesh for People Who Have Stuff to Do](https://www.lucavall.in/blog/the-istio-service-mesh-for-people-who-have-stuff-to-do)

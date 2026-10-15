@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-22
 attribution: "Wilson Wu"
 tags: [ai,llm,vllm,pd-disaggregated,opensource]
+aliases:
+    - /en/blog/2025/llm-pd-disaggregated/
 ---
 
 As Large Language Models (LLMs) are widely deployed in dialogue systems, intelligent assistants, and Agent scenarios, the core challenge for inference systems has shifted from "can it run" to "**how to run with lower latency, higher throughput, and greater stability**". Against this backdrop, **PD Disaggregated (Prefill / Decode Decoupling)** has gradually become a key architectural concept in large-scale online inference systems.

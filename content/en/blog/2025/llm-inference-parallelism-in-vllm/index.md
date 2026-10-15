@@ -4,6 +4,8 @@ description:
 publishdate: 2025-12-24
 attribution: "Wilson Wu"
 tags: [ai,llm,vllm,inference,parallelism,tp,dp,pp,ep]
+aliases:
+    - /en/blog/2025/llm-inference-parallelism-in-vllm/
 ---
 
 When the parameter scale of Large Language Models (LLMs) crosses the multi-billion threshold, one fact becomes unavoidable: **the era of single-card is over**. Whether for training or inference, the parameter scale of the model itself, the growth speed of KV Cache, and the memory and compute pressure brought by concurrent requests in real business scenarios all dictate that large models must run in multi-GPU or even multi-node environments.

@@ -4,6 +4,8 @@ description:
 publishdate: 2026-01-19
 attribution: "Wilson Wu"
 tags: [azure,ai,trellis,3d,llm,python,model,vm]
+aliases:
+    - /en/blog/2026/llm-microsoft-trellis-3d/
 ---
 
 ![Trellis-3D](1-trellis-3d.png)
