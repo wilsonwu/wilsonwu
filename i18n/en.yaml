@@ -1,0 +1,17 @@
+- id: related_posts
+  translation: "Related posts"
+
+- id: note
+  translation: "Note"
+
+- id: tip
+  translation: "Tip"
+
+- id: important
+  translation: "Important"
+
+- id: warning
+  translation: "Warning"
+
+- id: caution
+  translation: "Caution"

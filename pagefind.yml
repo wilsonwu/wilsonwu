@@ -1,0 +1,11 @@
+# Pagefind search index, built after Hugo: npx pagefind (reads this file).
+site: public
+# Only article pages are indexed (no lists, redirects or the search page itself).
+root_selector: article.post-single
+exclude_selectors:
+  - .post-meta
+  - .breadcrumbs
+  - .post-footer
+  - .related-posts
+  - .giscus
+  - .anchor

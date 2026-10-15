@@ -73,7 +73,7 @@ MoE 是当前最重要的新架构之一，代表模型包括：
 
 ### 架构 {#moe-architecture}
 
-MoE 不再让所有参数参与每次计算，而是通过**路由（Routing）**机制让每个 token 只激活若干专家层（Expert）。
+MoE 不再让所有参数参与每次计算，而是通过**路由（Routing）**\ 机制让每个 token 只激活若干专家层（Expert）。
 
 ![Token Choice Routing](3-moe-token-choice-routing.png)
 

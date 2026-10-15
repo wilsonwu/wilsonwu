@@ -6,7 +6,7 @@ attribution: "Wilson Wu"
 tags: [azure,ai,sore2,sore,llm,python,openai]
 ---
 
-随着 Azure AI Foundry 开放对 **Sora 2（OpenAI 生成式视频模型）**的支持，开发者现在可以在企业级合规、可管控的环境中使用顶尖的视频生成能力。本教程将带你从零开始，通过 **Playground** 和 **Python SDK** 两种方式调用 Sora 2，完成「文本生成视频」的流程。
+随着 Azure AI Foundry 开放对 **Sora 2（OpenAI 生成式视频模型）**\ 的支持，开发者现在可以在企业级合规、可管控的环境中使用顶尖的视频生成能力。本教程将带你从零开始，通过 **Playground** 和 **Python SDK** 两种方式调用 Sora 2，完成「文本生成视频」的流程。
 
 ## 准备工作
 

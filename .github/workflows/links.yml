@@ -1,0 +1,30 @@
+name: Check external links
+
+on:
+  schedule:
+    # Mondays 06:17 UTC; a failed run means a link in the articles needs attention.
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Check external links in the articles
+        uses: lycheeverse/lychee-action@v2
+        with:
+          lycheeVersion: v0.24.2
+          args: >-
+            --config lychee.toml
+            --scheme https --scheme http
+            --exclude '^https?://wilsonwu\.me'
+            --exclude-loopback --exclude-private
+            --root-dir '${{ github.workspace }}'
+            --max-concurrency 8
+            './content/**/*.md'

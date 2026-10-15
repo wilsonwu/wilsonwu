@@ -1,0 +1,40 @@
+{{- /* After the article body: related posts, plus the scripts this page's content needs. */ -}}
+{{- if and .IsPage (eq .Section "blog") }}
+  {{- with where (site.RegularPages.Related .) "Section" "blog" | first 5 }}
+<nav class="related-posts" aria-label="{{ i18n "related_posts" }}">
+  <h2>{{ i18n "related_posts" }}</h2>
+  <ul>
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</nav>
+  {{- end }}
+{{- end }}
+
+{{- if findRE `<img\s` .Content 1 }}
+  {{- with resources.Get "js/vendor/medium-zoom.min.js" | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+  {{- end }}
+<script>mediumZoom(".post-content img:not(a img)", { margin: 24, background: "var(--theme)" });</script>
+{{- end }}
+
+{{- if .Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@12.2.0/dist/mermaid.esm.min.mjs";
+  const blocks = [...document.querySelectorAll("pre.mermaid")];
+  blocks.forEach((el) => (el.dataset.source = el.textContent));
+  const render = () => {
+    const dark = document.documentElement.dataset.theme === "dark";
+    mermaid.initialize({ startOnLoad: false, theme: dark ? "dark" : "default" });
+    blocks.forEach((el) => {
+      el.removeAttribute("data-processed");
+      el.textContent = el.dataset.source;
+    });
+    mermaid.run({ nodes: blocks });
+  };
+  render();
+  // Redraw in the new colors when the PaperMod theme toggle switches light/dark.
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>
+{{- end }}

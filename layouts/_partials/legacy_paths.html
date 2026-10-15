@@ -4,7 +4,10 @@
   {{- if eq .Lang "en" }}
     {{- $paths = slice (printf "/en%s" .RelPermalink) }}
   {{- else }}
-    {{- $paths = .Aliases }}
+    {{- /* Hugo reports aliases under the language prefix (/zh/old-path); the old URLs were at the site root. */}}
+    {{- range .Aliases }}
+      {{- $paths = $paths | append (printf "/%s/" (strings.Trim (strings.TrimPrefix "/zh/" .) "/")) }}
+    {{- end }}
     {{- if and (not .IsPage) (not .IsTranslated) }}
       {{- $paths = $paths | append (strings.TrimPrefix "/zh" .RelPermalink) }}
     {{- end }}

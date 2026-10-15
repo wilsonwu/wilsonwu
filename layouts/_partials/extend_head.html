@@ -1,3 +1,10 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1690494790292076"
      crossorigin="anonymous"></script>
+{{- if .IsPage }}
+  {{- /* Render the content first so the math render hook has flagged pages that need KaTeX's stylesheet. */}}
+  {{- $noop := .WordCount }}
+  {{- if .Store.Get "hasMath" }}
+<link rel="stylesheet" href="{{ "katex/0.18.4/katex.min.css" | relURL }}">
+  {{- end }}
+{{- end }}
 {{- partial "legacy_urls.html" . }}

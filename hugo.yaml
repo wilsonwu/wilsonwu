@@ -1,10 +1,16 @@
 title: Wilson Wu
 baseURL: https://wilsonwu.me/
-theme: PaperMod
 defaultContentLanguage: en
-googleAnalytics: G-SYXWVNYJHY
 enableRobotsTXT: true
-paginate: 15
+# Front matter dates without a time zone (publishdate: 2026-10-15) are read in this zone.
+timeZone: America/Toronto
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+pagination:
+  pagerSize: 15
 
 taxonomies:
     tag: "tags"
@@ -12,17 +18,30 @@ taxonomies:
 # internationalization: English at the site root, Chinese under /zh/
 languages:
   en:
-    languageCode: en-US
-    languageDirection: ltr
+    locale: en-US
+    direction: ltr
     contentDir: content/en
-    languageName: English
+    label: English
     weight: 1
+    params:
+      editPost:
+        URL: https://github.com/wilsonwu/wilsonwu/edit/main/content/en
+        Text: Suggest changes
+        appendFilePath: true
   zh:
-    languageCode: zh-CN
-    languageDirection: ltr
+    locale: zh-CN
+    direction: ltr
     contentDir: content/zh
-    languageName: Chinese
+    label: Chinese
     weight: 2
+    # Count CJK characters as words (reading time, summaries). Chinese site only: English
+    # posts that quote some Chinese would otherwise get a far too short reading time.
+    hasCJKLanguage: true
+    params:
+      editPost:
+        URL: https://github.com/wilsonwu/wilsonwu/edit/main/content/zh
+        Text: 提出修改建议
+        appendFilePath: true
 
 menus:
   main:
@@ -63,11 +82,6 @@ params:
     Title: Welcome!
     Content: Cloud Native Enterprise Solutions and AI Business Applications, enhanced by Open Source!
   copyright: "Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>"
-  fuseOpts:
-    includeScore: true
-    includeMatches: true
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
   showShareButtons: true
   showReadingTime: true
   cover:
@@ -75,14 +89,65 @@ params:
   showBreadCrumbs: false
   showPostNavLinks: true
   showCodeCopyButtons: true
+  ShowFullTextinRSS: true
   comments: true
+  # Comments are GitHub Discussions of this repository (https://giscus.app).
+  giscus:
+    repo: wilsonwu/wilsonwu
+    repoId: "MDEwOlJlcG9zaXRvcnkyNDcyNDc1NTk="
+    category: Announcements
+    categoryId: "DIC_kwDODryyx84DIf5N"
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: date
+      weight: 10
+
+markup:
+  goldmark:
+    extensions:
+      # Single ~ stays literal (0.1~0.2); ~~text~~ is still deleted text.
+      strikethrough: false
+      extras:
+        delete:
+          enable: true
+      # Allows **bold**\ next to CJK punctuation; "\ " renders as nothing.
+      cjk:
+        enable: true
+        escapedSpace: true
+      # LaTeX math, rendered at build time by layouts/_markup/render-passthrough.html.
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
 
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # necessary for search
+    - JSON # old search index URLs (search itself uses Pagefind)
+    - llms
+
+outputFormats:
+  llms:
+    mediaType: text/plain
+    baseName: llms
+    isPlainText: true
+    notAlternative: true
 
 services:
-  disqus:
-    shortname: wilsonwu
+  googleAnalytics:
+    id: G-SYXWVNYJHY
+  # Feeds carry full articles (ShowFullTextinRSS), so keep them to the latest 20.
+  rss:
+    limit: 20
+
+caches:
+  images:
+    dir: :cacheDir/images

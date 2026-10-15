@@ -1,0 +1,14 @@
+{{- /* LaTeX between \( \), \[ \] or $$ $$, rendered by KaTeX at build time (no JavaScript); extend_head.html adds the stylesheet. */ -}}
+{{- $opts := dict "displayMode" (eq .Type "block") "output" "htmlAndMathml" }}
+{{- with try (transform.ToMath .Inner $opts) }}
+  {{- with .Err }}
+    {{- errorf "Unable to render math %q (%s): %s" $.Inner $.Position . }}
+  {{- else }}
+    {{- $.Page.Store.Set "hasMath" true }}
+    {{- if eq $.Type "block" }}
+      <div class="math-display">{{ .Value }}</div>
+    {{- else }}
+      {{- .Value }}
+    {{- end }}
+  {{- end }}
+{{- end -}}

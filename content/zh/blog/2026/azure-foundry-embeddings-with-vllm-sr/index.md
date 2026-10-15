@@ -10,7 +10,7 @@ tags: [azure,ai,vllm,vsr,vllm-sr,semantic-router,embedding,llm,remote]
 
 在 vLLM Semantic Router 的设计中，Embedding 推理是驱动语义路由的核心信号之一。
 
-官方教程已经演示了如何使用**远程 Embedding 推理提供商（Remote Embedding Providers）**替代本地 Embedding 推理服务：
+官方教程已经演示了如何使用**远程 Embedding 推理提供商（Remote Embedding Providers）**\ 替代本地 Embedding 推理服务：
 
 👉 [https://vllm-sr.ai/docs/tutorials/global/remote-embeddings/](https://vllm-sr.ai/docs/tutorials/global/remote-embeddings/)
 

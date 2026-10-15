@@ -1,0 +1,11 @@
+{
+  "name": "wilsonwu-blog",
+  "private": true,
+  "description": "Build tools for the Hugo site; see Makefile.",
+  "scripts": {
+    "index": "pagefind --site public"
+  },
+  "devDependencies": {
+    "pagefind": "1.5.2"
+  }
+}

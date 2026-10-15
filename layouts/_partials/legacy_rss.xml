@@ -1,1 +1,1 @@
-{{- template "_default/rss.xml" . -}}
+{{- template "rss.xml" . -}}

@@ -47,7 +47,7 @@ tags: [ai,llm,vllm,inference,parallelism,tp,dp,pp,ep]
 适用场景：
 
 * 单模型过大但层数不多
-* 对 **TTFT（Time To First Token）**敏感的在线推理
+* 对 **TTFT（Time To First Token）**\ 敏感的在线推理
 
 ### Data Parallelism（DP）：请求级复制
 

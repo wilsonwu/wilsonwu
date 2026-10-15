@@ -87,7 +87,7 @@ TRELLIS 在包含多种来源（如 Objaverse、ABO 等）的大规模 3D 数据
 
 ## 部署和使用
 
-目前，微软尚未在 **Azure AI Foundry / Microsoft Foundry** 中以 Serverless 或托管模型的形式直接提供 TRELLIS。因此，在 Azure 云环境中使用 TRELLIS 的**最可行、也是最稳定的方式**，是基于 **Azure GPU 虚拟机（VM）**进行自托管部署。
+目前，微软尚未在 **Azure AI Foundry / Microsoft Foundry** 中以 Serverless 或托管模型的形式直接提供 TRELLIS。因此，在 Azure 云环境中使用 TRELLIS 的**最可行、也是最稳定的方式**，是基于 **Azure GPU 虚拟机（VM）**\ 进行自托管部署。
 
 这种方式具备以下优势：
 

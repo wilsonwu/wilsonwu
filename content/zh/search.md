@@ -1,4 +1,7 @@
 ---
 title: "搜索"
-layout: search
+layout: pagefind
+searchHidden: true
+hiddenInRss: true
+ShowReadingTime: false
 ---

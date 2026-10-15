@@ -42,9 +42,9 @@ $$
 
 Where:
 
-* $r_t(\theta) = \frac{\pi_\theta(a|s)}{\pi_{\theta_{old}}(a|s)}$
-* $A_t$: advantage function
-* $\epsilon$: clipping coefficient, usually 0.1 to 0.2
+* \(r_t(\theta) = \frac{\pi_\theta(a|s)}{\pi_{\theta_{old}}(a|s)}\)
+* \(A_t\): advantage function
+* \(\epsilon\): clipping coefficient, usually 0.1 to 0.2
 
 ### 3. Key Mechanisms
 
@@ -101,7 +101,7 @@ $$
 
 Where:
 
-* $\hat{R}(a)$: normalized reward, such as rank-based or mean-centered reward
+* \(\hat{R}(a)\): normalized reward, such as rank-based or mean-centered reward
 
 ### 3. Key Characteristics
 

@@ -1,6 +1,9 @@
 ---
 title: "Search"
-layout: search
+layout: pagefind
+searchHidden: true
+hiddenInRss: true
+ShowReadingTime: false
 aliases:
     - /en/search/
 ---

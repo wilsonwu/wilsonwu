@@ -1,1 +1,43 @@
-{{ template "_internal/disqus.html" . }}
+{{- /* giscus: comments stored as GitHub Discussions. Renders nothing until repoId and categoryId are configured. */ -}}
+{{- with site.Params.giscus }}
+  {{- if and .repoId .categoryId }}
+    {{- $lang := "en" }}
+    {{- if eq $.Lang "zh" }}{{ $lang = "zh-CN" }}{{ end }}
+    {{- $cfg := dict
+      "repo" .repo
+      "repo-id" .repoId
+      "category" .category
+      "category-id" .categoryId
+      "mapping" "pathname"
+      "strict" "1"
+      "reactions-enabled" "1"
+      "emit-metadata" "0"
+      "input-position" "top"
+      "lang" $lang
+      "loading" "lazy"
+    }}
+<div class="giscus"></div>
+<script>
+  (function () {
+    var theme = function () {
+      return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+    };
+    var cfg = {{ $cfg }};
+    var s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.async = true;
+    s.crossOrigin = "anonymous";
+    cfg.theme = theme();
+    Object.keys(cfg).forEach(function (k) { s.setAttribute("data-" + k, cfg[k]); });
+    document.querySelector(".giscus").after(s);
+    // Follow PaperMod's light/dark toggle.
+    new MutationObserver(function () {
+      var frame = document.querySelector("iframe.giscus-frame");
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme() } } }, "https://giscus.app");
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+</script>
+  {{- end }}
+{{- end -}}

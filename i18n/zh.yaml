@@ -1,0 +1,17 @@
+- id: related_posts
+  translation: "相关文章"
+
+- id: note
+  translation: "说明"
+
+- id: tip
+  translation: "提示"
+
+- id: important
+  translation: "重要"
+
+- id: warning
+  translation: "警告"
+
+- id: caution
+  translation: "注意"

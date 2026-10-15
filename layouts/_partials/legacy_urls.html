@@ -3,14 +3,24 @@
 {{- $paged := in (slice "home" "section" "term") .Kind }}
 {{- /* list.html builds the paginator after this head partial runs; it is safe to read only on later pager renders. */}}
 {{- $pagerReady := and $paged (.Scratch.Get "legacyPagerReady") }}
+{{- /* Paths where Hugo writes the alias redirect itself (it reports them without the trailing slash). */}}
+{{- $hugoAliases := slice }}
+{{- range .Aliases }}
+  {{- $hugoAliases = $hugoAliases | append (printf "%s/" (strings.TrimSuffix "/" .)) }}
+{{- end }}
 {{- range partial "legacy_paths.html" . }}
   {{- $dir := strings.TrimPrefix "/" . }}
+  {{- $byHugo := in $hugoAliases . }}
   {{- if $page.IsPage }}
-    {{- /* Bundle files (images), only for pages that existed before the switch. */}}
-    {{- if in $page.Aliases . }}
+    {{- /* English pages without an /en/ alias did not exist before the switch; Chinese ones come from aliases. */}}
+    {{- if or $byHugo (ne $page.Lang "en") }}
+      {{- /* Bundle files (images) at the old URL. */}}
       {{- range $page.Resources }}
         {{- $file := strings.TrimPrefix $page.RelPermalink .RelPermalink }}
         {{- (resources.Copy (path.Join $dir $file) .).Publish }}
+      {{- end }}
+      {{- if not $byHugo }}
+        {{- (resources.FromString (path.Join $dir "index.html") (partial "redirect.html" $page.Permalink)).Publish }}
       {{- end }}
     {{- end }}
   {{- else }}
@@ -24,8 +34,8 @@
       {{- end }}
       {{- (resources.FromString (path.Join $dir "index.xml") $rss).Publish }}
     {{- end }}
-    {{- /* Hugo writes front matter aliases and the /en/ home redirect itself. */}}
-    {{- if not (or $page.IsHome (in $page.Aliases .)) }}
+    {{- /* Hugo writes its own aliases and the /en/ home redirect. */}}
+    {{- if not (or $page.IsHome $byHugo) }}
       {{- (resources.FromString (path.Join $dir "index.html") (partial "redirect.html" $page.Permalink)).Publish }}
     {{- end }}
     {{- if and $page.IsHome (eq $page.Lang "en") }}

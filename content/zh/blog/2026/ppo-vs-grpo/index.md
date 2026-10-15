@@ -34,15 +34,15 @@ PPO 的核心目标是：
 
 其优化目标函数为：
 
-[
+$$
 L^{PPO}(\theta) = \mathbb{E}\left[\min\left(r_t(\theta) A_t,\ \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon) A_t\right)\right]
-]
+$$
 
 其中：
 
-* ( r_t(\theta) = \frac{\pi_\theta(a|s)}{\pi_{\theta_{old}}(a|s)} )
-* ( A_t )：优势函数（Advantage）
-* ( \epsilon )：裁剪系数（通常 0.1~0.2）
+* \( r_t(\theta) = \frac{\pi_\theta(a|s)}{\pi_{\theta_{old}}(a|s)} \)
+* \( A_t \)：优势函数（Advantage）
+* \( \epsilon \)：裁剪系数（通常 0.1~0.2）
 
 ### 3. 关键机制
 
@@ -72,7 +72,7 @@ PPO 的稳定性来源于三点：
 
 ### 1. 背景
 
-GRPO 是在 RLHF 场景中提出的一种**去 Value Function（无 critic）**的优化方法，其目标是：
+GRPO 是在 RLHF 场景中提出的一种**去 Value Function（无 critic）**\ 的优化方法，其目标是：
 
 > **简化 PPO 训练流程，降低工程复杂度，同时提升吞吐。**
 
@@ -93,13 +93,13 @@ GRPO 的关键在于：
 
 可表示为：
 
-[
+$$
 L^{GRPO} = \mathbb{E}\left[\log \pi_\theta(a|s) \cdot \hat{R}(a)\right]
-]
+$$
 
 其中：
 
-* ( \hat{R}(a) )：归一化后的 reward（如 rank-based 或 mean-centered）
+* \( \hat{R}(a) \)：归一化后的 reward（如 rank-based 或 mean-centered）
 
 ### 3. 关键特点
 

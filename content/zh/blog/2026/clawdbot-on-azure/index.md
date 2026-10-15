@@ -19,7 +19,7 @@ tags: [azure,ai,clawdbot,llm,vm,agent]
 * 支持在本地或自托管服务器上运行，数据默认保存在本地，增强隐私保护。
 * 通过插件/技能扩展，实现日程提醒、文件管理、邮件处理、代码生成等功能。
 
-Clawdbot 的核心由 **Gateway、Providers（平台接入）、Agents/Skills（智能任务执行单元）**构成。Gateway 负责消息总线、Providers 负责与各消息平台对接，Agents/Skills 则实际执行用户请求。
+Clawdbot 的核心由 **Gateway、Providers（平台接入）、Agents/Skills（智能任务执行单元）**\ 构成。Gateway 负责消息总线、Providers 负责与各消息平台对接，Agents/Skills 则实际执行用户请求。
 
 ## Clawdbot 的主要特性
 

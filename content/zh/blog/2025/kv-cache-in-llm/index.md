@@ -6,7 +6,7 @@ attribution: "Wilson Wu"
 tags: [ai,kv-cache,llm,python,openai]
 ---
 
-随着大语言模型（LLM）规模不断增长，推理成本也随之飙升。为了让模型在响应用户请求时更快、更经济地运行，各类优化技术不断涌现。其中，**KV-Cache（Key-Value Cache）**是目前最关键、影响最深远的推理加速机制之一，被所有主流的推理框架（如 vLLM、TensorRT-LLM、LLama.cpp、llm-d、OpenAI Triton Transformer Engine 等）广泛使用。
+随着大语言模型（LLM）规模不断增长，推理成本也随之飙升。为了让模型在响应用户请求时更快、更经济地运行，各类优化技术不断涌现。其中，**KV-Cache（Key-Value Cache）**\ 是目前最关键、影响最深远的推理加速机制之一，被所有主流的推理框架（如 vLLM、TensorRT-LLM、LLama.cpp、llm-d、OpenAI Triton Transformer Engine 等）广泛使用。
 
 这篇文章将全面介绍什么是 KV-Cache、它如何工作、为什么它能极大提升推理效率、它对行业带来了什么影响，以及在实际使用中的最佳实践。
 
@@ -18,7 +18,7 @@ tags: [ai,kv-cache,llm,python,openai]
 
 理解起来非常简单，单其中细节结合复杂度计算还是略有抽象。
 
-KV-Cache，全称 **Key-Value Cache**，是在 LLM 推理过程中对 Transformer 解码器中**自注意力层（Self-Attention）**的中间结果进行缓存的一种方法。
+KV-Cache，全称 **Key-Value Cache**，是在 LLM 推理过程中对 Transformer 解码器中**自注意力层（Self-Attention）**\ 的中间结果进行缓存的一种方法。
 
 Transformer 的自回归生成方式决定了：
 **每生成一个新 token，就需要重新计算它与全部历史 token 的注意力关系**。

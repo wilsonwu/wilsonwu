@@ -1,0 +1,3 @@
+{{- /* Mermaid diagram; the script loaded by extend_post_content.html turns it into SVG (the source stays readable without it). */ -}}
+<pre class="mermaid">{{ .Inner | htmlEscape | safeHTML }}</pre>
+{{- .Page.Store.Set "hasMermaid" true -}}

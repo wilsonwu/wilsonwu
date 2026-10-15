@@ -1,0 +1,13 @@
+# lychee link checker settings (https://lychee.cli.rs), used by `make check` and CI.
+# The site root and the https://wilsonwu.me/ -> public/ remap are passed on the command line.
+include_fragments = "full"
+index_files = ["index.html"]
+no_progress = true
+# Hosts that block automated requests; only relevant to the scheduled external check.
+exclude = [
+  '^https://(www\.)?linkedin\.com/',
+  '^https://(www\.)?(x|twitter)\.com/',
+  '^https://medium\.com/',
+]
+# 429: rate limited, not broken.
+accept = ["100..=103", "200..=299", "429"]
